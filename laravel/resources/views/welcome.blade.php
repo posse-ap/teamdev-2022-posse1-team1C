@@ -97,7 +97,6 @@
                 <a href="https://forge.laravel.com">Forge</a>
                 <a href="https://vapor.laravel.com">Vapor</a>
                 <a href="https://github.com/laravel/laravel">GitHub</a>
-                <p class="bg-blue-200"></p>
             </div>
         </div>
     </div>
