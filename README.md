@@ -3,3 +3,4 @@
 2. phpコンテナに入る
 3. composer install
 4. npm install
+5. php artisan migrate
