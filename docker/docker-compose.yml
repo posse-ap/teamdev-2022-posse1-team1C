@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  mysql:
+    build:
+      context: ./db
+    platform: linux/x86_64
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db/var/lib/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=laravel
+      - MYSQL_USER=laravel
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+  phpfpm:
+    build:
+      context: ./app
+    volumes:
+      - ../laravel:/work/backend
+    depends_on: ["mysql"]
+  nginx:
+    build:
+      context: ./web
+    ports:
+      - 8080:80
+    volumes:
+      - ../laravel:/work/backend
+    depends_on: ["phpfpm"]
+  container_mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
