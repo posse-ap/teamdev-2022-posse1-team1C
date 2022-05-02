@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/chat', 'Api\ChatController@index');
 Route::post('/chat', 'Api\ChatController@store');
+
+Route::get('/paypay', 'Api\PaypayController@index');
