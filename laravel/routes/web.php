@@ -19,6 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/MenteeRegister', 'HomeController@MenteeRegister')->name('home');
+Route::get('/mentee/register', 'HomeController@MenteeRegister')->name('mentete.register');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
+
+Route::get('/schedule-test', function () {
+  return view('schedule.index');
+});
