@@ -10,15 +10,15 @@
     <header class="h-16 w-full fixed top-0 bg-white flex px-16">
         @include('includes.BeforeLoginHeader')
     </header>
-
-    <main class="bg-gray-100">
+    
+    <main class="py-2 bg-gray-100">
         @yield('content')
     </main>
 
     <footer>
         @include('includes.footer')
     </footer>
-
+    
     <script>
    
         var txtPass = document.getElementById("password");
@@ -44,7 +44,7 @@
               btnEye2.className = "fa fa-eye-slash ml-2 mt-5";
             }
         }, false);
-      
+
     </script>
 </body>
 

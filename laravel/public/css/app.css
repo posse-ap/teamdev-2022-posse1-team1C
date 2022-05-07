@@ -730,6 +730,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-7 {
   margin-top: 1.75rem;
 }
+
 .mt-9 {
   margin-top: 2.25rem;
 }
@@ -739,6 +740,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-1 {
   margin-bottom: 0.25rem;
 }
+
 .inline-block {
   display: inline-block;
 }
