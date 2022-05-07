@@ -10,7 +10,7 @@
         @include('includes.BeforeLoginHeader')
     </header>
 
-    <main>
+    <main class="py-2 bg-gray-100">
         @yield('content')
     </main>
 
