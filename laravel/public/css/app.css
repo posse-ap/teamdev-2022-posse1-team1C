@@ -727,6 +727,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-28 {
   margin-left: 7rem;
 }
+.mt-7 {
+  margin-top: 1.75rem;
+}
 .inline-block {
   display: inline-block;
 }

@@ -36,9 +36,9 @@
                             <div class="form-group row ">
                                 <label for="password" class="col-md-4 col-form-label text-md-right font-bold">{{ __('パスワード（英数字8文字以上）') }}</label>
         
-                                <div class="col-md-6">
+                                <div class="col-md-6 flex">
                                     <input id="password" type="password" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-        
+                                    <span id="buttonEye" class="fa fa-eye ml-2 mt-5"></span>
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -49,8 +49,9 @@
     
                             <div class="form-group row">
                                 <label for="password-confirm" class="col-md-4 col-form-label text-md-right font-bold flex justify-center items-center -ml-48 mr-48">{{ __('確認用パスワード') }}</label>
-                                <div class="col-md-6">
+                                <div class="col-md-6 flex">
                                     <input id="password-confirm" type="password" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded form-control" name="password_confirmation" required autocomplete="new-password" placeholder="上と同じパスワードを入力してください">
+                                    <span id="buttonEye" class="fa fa-eye ml-2 mt-5"></span>
                                 </div>
                             </div>
 

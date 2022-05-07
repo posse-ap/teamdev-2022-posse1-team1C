@@ -3,6 +3,7 @@
 <head>
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,6 +18,20 @@
     <footer>
         @include('includes.footer')
     </footer>
+    <script>
+        var txtPass = document.getElementById("password");
+        var btnEye = document.getElementById("buttonEye");
+        btnEye.addEventListener('click', function() {
+            if (txtPass.type === "text") {
+              txtPass.type = "password";
+              btnEye.className = "fa fa-eye";
+            } else {
+              txtPass.type = "text";
+              btnEye.className = "fa fa-eye-slash";
+            }
+        }, false);
+      
+    </script>
 </body>
 
 </html>
