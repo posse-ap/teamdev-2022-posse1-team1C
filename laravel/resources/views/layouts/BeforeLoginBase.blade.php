@@ -19,8 +19,8 @@
         @include('includes.footer')
     </footer>
     <script>
-        var txtPass = document.getElementById("password");
-        var btnEye = document.getElementById("buttonEye");
+        const txtPass = document.getElementById("password");
+        const btnEye = document.getElementById("buttonEye");
         btnEye.addEventListener('click', function() {
             if (txtPass.type === "text") {
               txtPass.type = "password";
@@ -31,8 +31,8 @@
             }
         }, false);
 
-        var txtPass2 = document.getElementById("password-confirm");
-       var btnEye2 = document.getElementById("buttonEye2");
+        const txtPass2 = document.getElementById("password-confirm");
+       const btnEye2 = document.getElementById("buttonEye2");
         btnEye2.addEventListener('click', function() {
           if (txtPass2.type === "text") {
             txtPass2.type = "password";
