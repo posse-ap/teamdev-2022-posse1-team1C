@@ -23,5 +23,5 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/MenteeRegister', 'HomeController@MenteeRegister')->name('home');
-
+Route::get('/MenterRegister', 'HomeController@MenterRegister');
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
