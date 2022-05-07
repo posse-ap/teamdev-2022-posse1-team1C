@@ -3,6 +3,7 @@
 <head>
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -10,13 +11,41 @@
         @include('includes.BeforeLoginHeader')
     </header>
 
-    <main>
+    <main class="bg-gray-100">
         @yield('content')
     </main>
 
     <footer>
         @include('includes.footer')
     </footer>
+
+    <script>
+   
+        var txtPass = document.getElementById("password");
+        var btnEye = document.getElementById("buttonEye");
+        btnEye.addEventListener('click', function() {
+            if (txtPass.type === "text") {
+              txtPass.type = "password";
+              btnEye.className = "fa fa-eye ml-2 mt-5";
+            } else {
+              txtPass.type = "text";
+              btnEye.className = "fa fa-eye-slash ml-2 mt-5";
+            }
+        }, false);
+
+        var txtPass2 = document.getElementById("password-confirm");
+        var btnEye2 = document.getElementById("buttonEye2");
+        btnEye2.addEventListener('click', function() {
+            if (txtPass2.type === "text") {
+              txtPass2.type = "password";
+              btnEye2.className = "fa fa-eye ml-2 mt-5";
+            } else {
+              txtPass2.type = "text";
+              btnEye2.className = "fa fa-eye-slash ml-2 mt-5";
+            }
+        }, false);
+      
+    </script>
 </body>
 
 </html>
