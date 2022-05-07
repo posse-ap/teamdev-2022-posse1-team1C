@@ -15,9 +15,12 @@ Route::get('/', function () {
   return view('welcome');
 });
 
+Route::get('/top', 'TopController@top')->name('top');
+
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/MenteeRegister', 'HomeController@MenteeRegister')->name('home');
 

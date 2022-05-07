@@ -4,6 +4,7 @@
 3. composer install
 4. npm install
 5. php artisan migrate
+6. localhost:8080にアクセス
 
 # 注意事項
 - cssはtailwindを使います
