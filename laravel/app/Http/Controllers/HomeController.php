@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -28,6 +28,11 @@ class HomeController extends Controller
 
     public function MenteeRegister()
     {
-        return view('auth.MenteeRegister');
+        return view('auth.mentee_register');
+    }
+
+    public function MenteeRegisterConfirm()
+    {
+        return view('auth.mentee_register_confirm');
     }
 }
