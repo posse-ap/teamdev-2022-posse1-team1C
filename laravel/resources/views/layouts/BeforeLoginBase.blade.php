@@ -24,12 +24,24 @@
         btnEye.addEventListener('click', function() {
             if (txtPass.type === "text") {
               txtPass.type = "password";
-              btnEye.className = "fa fa-eye";
+              btnEye.className = "fa fa-eye  ml-2 mt-5";
             } else {
               txtPass.type = "text";
-              btnEye.className = "fa fa-eye-slash";
+              btnEye.className = "fa fa-eye-slash  ml-2 mt-5";
             }
         }, false);
+
+        var txtPass2 = document.getElementById("password-confirm");
+       var btnEye2 = document.getElementById("buttonEye2");
+        btnEye2.addEventListener('click', function() {
+          if (txtPass2.type === "text") {
+            txtPass2.type = "password";
+            btnEye2.className = "fa fa-eye  ml-2 mt-5";
+          } else {
+            txtPass2.type = "text";
+            btnEye2.className = "fa fa-eye-slash  ml-2 mt-5";
+          }
+      }, false);
       
     </script>
 </body>

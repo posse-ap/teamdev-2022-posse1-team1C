@@ -51,7 +51,7 @@
                                 <label for="password-confirm" class="col-md-4 col-form-label text-md-right font-bold flex justify-center items-center -ml-48 mr-48">{{ __('確認用パスワード') }}</label>
                                 <div class="col-md-6 flex">
                                     <input id="password-confirm" type="password" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded form-control" name="password_confirmation" required autocomplete="new-password" placeholder="上と同じパスワードを入力してください">
-                                    <span id="buttonEye" class="fa fa-eye ml-2 mt-5"></span>
+                                    <span id="buttonEye2" class="fa fa-eye ml-2 mt-5"></span>
                                 </div>
                             </div>
 
