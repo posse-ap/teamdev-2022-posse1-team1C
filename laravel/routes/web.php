@@ -26,4 +26,6 @@ Route::get('/MenteeRegister', 'HomeController@MenteeRegister')->name('home');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
 
+//Call
 Route::get('/call', 'CallController@index')->name('call');
+Route::get('/beforecall', 'CallController@beforecall')->name('beforecall');

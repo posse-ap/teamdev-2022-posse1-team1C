@@ -10,4 +10,9 @@ class CallController extends Controller
     {
         return view('call.index');
     }
+
+    public function beforecall()
+    {
+        return view('call.before_call');
+    }
 }
