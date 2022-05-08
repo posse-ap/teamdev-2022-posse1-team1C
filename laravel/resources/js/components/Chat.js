@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import axios from "axios";
 
 // TODO is_mentorカラムをusersテーブルに追加する
-const user_id = document.getElementById("chat").dataset.user_id;
+const user_id = document.getElementById("chat")?.dataset.user_id;
 
 const threadId = 1;
 
