@@ -1,6 +1,6 @@
 @extends('layouts.BeforeLoginBase')
 
-@section('title', 'メンティーの登録画面')
+@section('title', 'メンティーの登録')
 
 @section('content')
 <div class="container">
