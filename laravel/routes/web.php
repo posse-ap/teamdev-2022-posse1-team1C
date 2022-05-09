@@ -22,8 +22,8 @@ Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/MenteeRegister', 'HomeController@MenteeRegister')->name('mentee-register');
-Route::get('/MenteeRegisterConfirm', 'HomeController@MenteeRegisterConfirm')->name('mentee-register-confirm');
+Route::get('/mentee/register', 'MenteeController@mentee_register')->name('mentee.register');
+Route::get('/mentee/register-confirm', 'MenteeController@mentee_register_confirm')->name('mentee.register_confirm');
 
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');

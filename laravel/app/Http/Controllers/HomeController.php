@@ -26,12 +26,12 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function MenteeRegister()
+    public function mentee_register()
     {
         return view('auth.mentee_register');
     }
 
-    public function MenteeRegisterConfirm()
+    public function mentee_register_Confirm()
     {
         return view('auth.mentee_register_confirm');
     }
