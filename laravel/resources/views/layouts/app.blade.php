@@ -48,8 +48,8 @@
 
 <script>
    
-      var txtPass = document.getElementById("password");
-      var btnEye = document.getElementById("buttonEye");
+      const txtPass = document.getElementById("password");
+      const btnEye = document.getElementById("buttonEye");
       btnEye.addEventListener('click', function() {
           if (txtPass.type === "text") {
             txtPass.type = "password";

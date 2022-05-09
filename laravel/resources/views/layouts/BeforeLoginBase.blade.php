@@ -11,7 +11,8 @@
         @include('includes.BeforeLoginHeader')
     </header>
 
-    <main class="bg-gray-100">
+
+    <main class="py-2 bg-gray-100">
         @yield('content')
     </main>
 
@@ -20,30 +21,30 @@
     </footer>
 
     <script>
-   
-        var txtPass = document.getElementById("password");
-        var btnEye = document.getElementById("buttonEye");
+        const txtPass = document.getElementById("password");
+        const btnEye = document.getElementById("buttonEye");
         btnEye.addEventListener('click', function() {
             if (txtPass.type === "text") {
               txtPass.type = "password";
-              btnEye.className = "fa fa-eye ml-2 mt-5";
+              btnEye.className = "fa fa-eye  ml-2 mt-5";
             } else {
               txtPass.type = "text";
-              btnEye.className = "fa fa-eye-slash ml-2 mt-5";
+              btnEye.className = "fa fa-eye-slash  ml-2 mt-5";
             }
         }, false);
 
-        var txtPass2 = document.getElementById("password-confirm");
-        var btnEye2 = document.getElementById("buttonEye2");
+        const txtPass2 = document.getElementById("password-confirm");
+        const btnEye2 = document.getElementById("buttonEye2");
         btnEye2.addEventListener('click', function() {
-            if (txtPass2.type === "text") {
-              txtPass2.type = "password";
-              btnEye2.className = "fa fa-eye ml-2 mt-5";
-            } else {
-              txtPass2.type = "text";
-              btnEye2.className = "fa fa-eye-slash ml-2 mt-5";
-            }
-        }, false);
+          if (txtPass2.type === "text") {
+            txtPass2.type = "password";
+            btnEye2.className = "fa fa-eye  ml-2 mt-5";
+          } else {
+            txtPass2.type = "text";
+            btnEye2.className = "fa fa-eye-slash  ml-2 mt-5";
+          }
+      }, false);
+
       
     </script>
 </body>

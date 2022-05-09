@@ -15,15 +15,15 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('/top', 'TopController@top')->name('top');
 
 
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/top', 'TopController@top')->name('top');
 
-Route::get('/MenteeRegister', 'HomeController@MenteeRegister')->name('home');
+Route::get('/mentee-register', 'HomeController@MenteeRegister')->name('mentee-register');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
 
-Route::get('/MenterRegister', 'HomeController@MenterRegister')->name('home');
+Route::get('/menter-register', 'HomeController@MenterRegister')->name('menter-register');
