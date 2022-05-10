@@ -477,6 +477,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: auto;
   margin-bottom: auto;
 }
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
 .mt-12 {
   margin-top: 3rem;
 }
@@ -528,14 +532,29 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mr-auto {
   margin-right: auto;
 }
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.-ml-48 {
+  margin-left: -12rem;
+}
+.mr-48 {
+  margin-right: 12rem;
+}
+.mb-0 {
+  margin-bottom: 0px;
+}
 .-ml-64 {
   margin-left: -16rem;
 }
 .mr-5 {
   margin-right: 1.25rem;
-}
-.mt-2 {
-  margin-top: 0.5rem;
 }
 .-ml-32 {
   margin-left: -8rem;
@@ -546,12 +565,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-7 {
   margin-left: 1.75rem;
 }
-.ml-2 {
-  margin-left: 0.5rem;
-}
-.mb-0 {
-  margin-bottom: 0px;
-}
 .mb-20 {
   margin-bottom: 5rem;
 }
@@ -561,14 +574,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-3 {
   margin-bottom: 0.75rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .inline-block {
   display: inline-block;
 }
 .flex {
   display: flex;
 }
-.table {
-  display: table;
+.grid {
+  display: grid;
 }
 .hidden {
   display: none;
@@ -597,6 +613,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-24 {
   height: 6rem;
 }
+.h-0 {
+  height: 0px;
+}
 .w-5\/12 {
   width: 41.666667%;
 }
@@ -609,11 +628,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-9\/12 {
   width: 75%;
 }
+.w-0 {
+  width: 0px;
+}
 .max-w-sm {
   max-width: 24rem;
 }
 .resize-none {
   resize: none;
+}
+.grid-cols-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -623,6 +648,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .justify-center {
   justify-content: center;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .gap-y-3 {
   row-gap: 0.75rem;
@@ -659,6 +687,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-2 {
   border-width: 2px;
 }
+.border-x-\[16px\] {
+  border-left-width: 16px;
+  border-right-width: 16px;
+}
+.border-y-\[8px\] {
+  border-top-width: 8px;
+  border-bottom-width: 8px;
+}
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -676,6 +712,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-teal-400 {
   --tw-border-opacity: 1;
   border-color: rgb(45 212 191 / var(--tw-border-opacity));
+}
+.border-y-transparent {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.border-r-transparent {
+  border-right-color: transparent;
+}
+.border-l-black {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .bg-slate-100 {
   --tw-bg-opacity: 1;
@@ -708,9 +755,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
-.bg-green-100 {
+.bg-gray-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -727,6 +774,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-0 {
   padding: 0px;
+}
+.p-10 {
+  padding: 2.5rem;
+}
+.p-5 {
+  padding: 1.25rem;
 }
 .px-16 {
   padding-left: 4rem;
@@ -785,6 +838,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-24 {
   padding-bottom: 6rem;
+}
+.pr-10 {
+  padding-right: 2.5rem;
 }
 .text-center {
   text-align: center;
@@ -864,6 +920,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .outline-gray-500 {
   outline-color: #6b7280;
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.checkedCellColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }
 .hover\:bg-blue-400:hover {
   --tw-bg-opacity: 1;
