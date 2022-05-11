@@ -2573,13 +2573,12 @@ var Call = function Call() {
   var localStream; // カメラ映像・音声取得
 
   (_navigator$mediaDevic = navigator.mediaDevices) === null || _navigator$mediaDevic === void 0 ? void 0 : _navigator$mediaDevic.getUserMedia({
-    video: true,
+    video: false,
     audio: true
   }).then(function (stream) {
-    // 成功時にvideo要素にカメラ映像をセットし、再生
-    var videoElm = document.getElementById('my-video');
-    videoElm.srcObject = stream;
-    videoElm.play(); // 着信時に相手にカメラ映像を返せるように、グローバル変数に保存しておく
+    // 成功時にaudio要素に音声をセット
+    var audioElm = document.getElementById('my-audio');
+    audioElm.srcObject = stream; // 着信時に相手に音声情報を返せるように、グローバル変数に保存しておく
 
     localStream = stream;
   })["catch"](function (error) {
@@ -2594,22 +2593,34 @@ var Call = function Call() {
   }); //PeerID取得
 
   peer.on('open', function () {
-    document.getElementById('my-id').textContent = peer.id;
+    document.getElementById('my-id').textContent = "あなたのID:" + peer.id;
   }); // 発信処理
 
   document.getElementById('make-call').onclick = function () {
     var theirID = document.getElementById('their-id').value;
-    var mediaConnection = peer.call(theirID, localStream);
+    var mediaConnection = peer.call(theirID, null, {
+      audioReceiveEnabled: true
+    });
     setEventListener(mediaConnection);
+  }; //ｍute処理
+
+
+  document.getElementById('ismute').onclick = function () {
+    var audio = document.getElementById('my-audio');
+    audio.classList.toggle('muted');
+    var mute = document.getElementById('mute');
+    mute.classList.toggle('hidden');
+    var unmute = document.getElementById('unmute');
+    unmute.classList.toggle('hidden');
   }; // イベントリスナを設置する関数
 
 
   var setEventListener = function setEventListener(mediaConnection) {
     mediaConnection.on('stream', function (stream) {
-      // video要素にカメラ映像をセットして再生
-      var videoElm = document.getElementById('their-video');
-      videoElm.srcObject = stream;
-      videoElm.play();
+      // audio要素に相手の音声情報をセットして再生
+      var audioElm = document.getElementById('their-audio');
+      audioElm.srcObject = stream;
+      audioElm.play();
     });
   }; //着信処理
 
@@ -2623,9 +2634,12 @@ var Call = function Call() {
     alert(err.message);
   }); //closeイベント
 
-  peer.on('close', function () {
-    alert('通信が切断しました。');
-  });
+  document.getElementById('hangup-call').onclick = function () {
+    alert('通信が切断しました。'); // peer.on('close', () => {
+    // });
+  };
+
+  console.log("動いているよ");
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {});
 };
 

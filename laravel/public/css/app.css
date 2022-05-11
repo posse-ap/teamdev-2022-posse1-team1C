@@ -588,6 +588,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-screen {
   height: 100vh;
 }
+.h-64 {
+  height: 16rem;
+}
+.h-32 {
+  height: 8rem;
+}
 .h-24 {
   height: 6rem;
 }
@@ -602,6 +608,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-9\/12 {
   width: 75%;
+}
+.w-screen {
+  width: 100vw;
+}
+.w-64 {
+  width: 16rem;
+}
+.w-32 {
+  width: 8rem;
 }
 .max-w-sm {
   max-width: 24rem;
@@ -618,8 +633,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 .justify-center {
   justify-content: center;
 }
+.justify-around {
+  justify-content: space-around;
+}
 .gap-y-3 {
   row-gap: 0.75rem;
+}
+.gap-x-0 {
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+}
+.gap-x-4 {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+.gap-x-11 {
+  -moz-column-gap: 2.75rem;
+       column-gap: 2.75rem;
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -643,6 +677,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .rounded-md {
   border-radius: 0.375rem;
+}
+.rounded-\[50\%\] {
+  border-radius: 50%;
 }
 .rounded-lg {
   border-radius: 0.5rem;
@@ -698,6 +735,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(244 248 250 / var(--tw-bg-opacity));
 }
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
 .p-2 {
   padding: 0.5rem;
 }
@@ -740,9 +785,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 .pb-32 {
   padding-bottom: 8rem;
@@ -756,11 +809,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pt-32 {
+  padding-top: 8rem;
+}
+.pb-20 {
+  padding-bottom: 5rem;
+}
 .pt-16 {
   padding-top: 4rem;
 }
 .pb-24 {
   padding-bottom: 6rem;
+}
+.text-center {
+  text-align: center;
 }
 .align-baseline {
   vertical-align: baseline;
@@ -802,6 +864,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-teal-400 {
   --tw-text-opacity: 1;
   color: rgb(45 212 191 / var(--tw-text-opacity));
+}
+.text-\[\#3A3A3A\] {
+  --tw-text-opacity: 1;
+  color: rgb(58 58 58 / var(--tw-text-opacity));
 }
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
