@@ -2639,18 +2639,7 @@ var Call = function Call() {
   peer.on('call', function (mediaConnection) {
     mediaConnection.answer(localStream);
     setEventListener(mediaConnection);
-  }); //errorイベント
-
-  peer.on('error', function (err) {
-    alert(err.message);
-  }); //closeイベント
-
-  document.getElementById('hangup-call').onclick = function () {
-    alert('通信が切断しました。'); // peer.on('close', () => {
-    // });
-  };
-
-  console.log("動いているよ");
+  });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {});
 };
 

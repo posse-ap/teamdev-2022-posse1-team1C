@@ -79,21 +79,6 @@ const Call = () => {
         setEventListener(mediaConnection);
     });
     
-    //errorイベント
-    peer.on('error', err => {
-        alert(err.message);
-    });
-    
-    //closeイベント
-    document.getElementById('hangup-call').onclick = () => {
-        alert('通信が切断しました。');
-        // peer.on('close', () => {
-            
-        // });
-    }
-    
-    console.log("動いているよ")
-
     return <div></div>;
 }
 
