@@ -2378,30 +2378,6 @@ var Checklist = function Checklist() {
     mentee_email: "bigdragon.06102001@gmail.com",
     cancellation_reason: "その他(相手のネットワーク環境が悪かった)",
     remarks: "林がメールで対応中"
-  }, {
-    start_date: "2022/04/11 19:00",
-    mentor_email: "ryudai.anada@keio.jp",
-    mentee_email: "bigdragon.06102001@gmail.com",
-    cancellation_reason: "システムエラー",
-    remarks: "林がメールで対応中"
-  }, {
-    start_date: "2022/04/12 20:00",
-    mentor_email: "ryudai.anada@keio.jp",
-    mentee_email: "bigdragon.06102001@gmail.com",
-    cancellation_reason: "その他(相手のネットワーク環境が悪かった)",
-    remarks: "林がメールで対応中"
-  }, {
-    start_date: "2022/04/11 19:00",
-    mentor_email: "ryudai.anada@keio.jp",
-    mentee_email: "bigdragon.06102001@gmail.com",
-    cancellation_reason: "システムエラー",
-    remarks: "林がメールで対応中"
-  }, {
-    start_date: "2022/04/12 20:00",
-    mentor_email: "ryudai.anada@keio.jp",
-    mentee_email: "bigdragon.06102001@gmail.com",
-    cancellation_reason: "その他(相手のネットワーク環境が悪かった)",
-    remarks: "林がメールで対応中"
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: "w-full h-full",
@@ -2698,27 +2674,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _PaymentList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PaymentList */ "./resources/js/components/admin/payment/PaymentList.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 
 var History = function History() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "block w-full h-full bg-white rounded-md shadow-lg px-10 pt-10",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
-      className: "font-bold text-2xl",
-      children: "\u5C65\u6B74"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {})]
+  var data = [{
+    name: "林千翼子",
+    email: "chiyoko.chocochick@gmail.com",
+    phone: "09033490834",
+    ticket: 2,
+    paypay: "https://qr.paypay.ne.jp/76LucDdT0p8IpHv5",
+    isPaid: true
+  }, {
+    name: "穴田竜大",
+    email: "ryudai.anada@keio.jp",
+    phone: "07012540066",
+    ticket: 1,
+    paypay: "https://qr.paypay.ne.jp/vN8WpVoN90JbCMuy",
+    isPaid: false
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_PaymentList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    data: data,
+    title: "\u5C65\u6B74"
   });
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (History);
-
-if (document.getElementById("history")) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(History, {}), document.getElementById("history"));
-}
 
 /***/ }),
 
@@ -2734,22 +2719,192 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _PaymentList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaymentList */ "./resources/js/components/admin/payment/PaymentList.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 var Monthly = function Monthly() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    className: "block w-full h-full bg-white rounded-md shadow-lg px-10 pt-10",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
-      className: "font-bold text-2xl",
-      children: "\u4ECA\u6708\u306E\u304A\u652F\u6255\u3044"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {})]
+  var data = [{
+    name: "林千翼子",
+    email: "chiyoko.chocochick@gmail.com",
+    phone: "09033490834",
+    ticket: 2,
+    paypay: "https://qr.paypay.ne.jp/76LucDdT0p8IpHv5",
+    isPaid: true
+  }, {
+    name: "穴田竜大",
+    email: "ryudai.anada@keio.jp",
+    phone: "07012540066",
+    ticket: 1,
+    paypay: "https://qr.paypay.ne.jp/vN8WpVoN90JbCMuy",
+    isPaid: false
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_PaymentList__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    data: data,
+    title: "\u4ECA\u6708\u306E\u304A\u652F\u6255\u3044"
   });
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Monthly);
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/payment/PaymentList.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/admin/payment/PaymentList.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _PaymentListCell__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaymentListCell */ "./resources/js/components/admin/payment/PaymentListCell.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+var PaymentList = function PaymentList(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "w-full h-full bg-white rounded-md shadow-lg px-10 pt-10 flex flex-col",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+      className: "font-bold text-2xl",
+      children: props.title
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "w-full h-full overflow-scroll pb-10",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+        className: "flex w-[150%] gap-5 mt-5 text-center items-center font-bold text-[#13B1C0]",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "w-[10%]",
+          children: "\u540D\u524D"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "w-[25%]",
+          children: "\u500B\u4EBA\u60C5\u5831"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "w-[7%]",
+          children: "\u30C1\u30B1\u30C3\u30C8\u6570"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "w-[8%]",
+          children: "\u304A\u652F\u6255\u3044\u984D"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "w-[25%]",
+          children: "\u304A\u652F\u6255\u3044\u7528URL"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "w-[15%]",
+          children: "QR\u30B3\u30FC\u30C9"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "w-[10%]",
+          children: "\u304A\u652F\u6255\u3044\u72B6\u6CC1"
+        })]
+      }), props.data.map(function (datum, key) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_PaymentListCell__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({}, datum), key);
+      })]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PaymentList);
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/payment/PaymentListCell.js":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/admin/payment/PaymentListCell.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var PaymentListCell = function PaymentListCell(props) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(props.isPaid),
+      _useState2 = _slicedToArray(_useState, 2),
+      paymentStatus = _useState2[0],
+      setPaymentStatus = _useState2[1];
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+    className: "flex w-[150%] gap-5 mt-5 text-center items-center",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+      className: "w-[10%]",
+      children: props.name
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+      className: "w-[25%]",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+          children: ["\u30E1\u30FC\u30EB\uFF1A", props.email]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+          children: ["\u96FB\u8A71\u756A\u53F7\uFF1A", props.phone]
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+      className: "w-[7%]",
+      children: [props.ticket, "\u679A"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+      className: "w-[8%]",
+      children: [props.ticket * 1000, "\u5186"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+      className: "w-[25%]",
+      children: props.paypay
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+      className: "w-[15%]",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+        type: "button",
+        value: "QR\u30B3\u30FC\u30C9\u3092\u8868\u793A",
+        className: "shadow active:bg-[#E2F0F2] hover:shadow-md py-2 px-3 cursor-pointer"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+      className: "w-[10%]",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+        className: "cursor-pointer",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+          type: "checkbox",
+          checked: paymentStatus,
+          className: "cursor-pointer",
+          onChange: function onChange() {
+            return setPaymentStatus(!paymentStatus);
+          }
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          className: "ml-1",
+          children: paymentStatus ? "お支払い済み" : "お支払い未完"
+        })]
+      })
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PaymentListCell);
 
 /***/ }),
 

@@ -17,34 +17,6 @@ const Checklist = () => {
             cancellation_reason: "その他(相手のネットワーク環境が悪かった)",
             remarks: "林がメールで対応中",
         },
-        {
-            start_date: "2022/04/11 19:00",
-            mentor_email: "ryudai.anada@keio.jp",
-            mentee_email: "bigdragon.06102001@gmail.com",
-            cancellation_reason: "システムエラー",
-            remarks: "林がメールで対応中",
-        },
-        {
-            start_date: "2022/04/12 20:00",
-            mentor_email: "ryudai.anada@keio.jp",
-            mentee_email: "bigdragon.06102001@gmail.com",
-            cancellation_reason: "その他(相手のネットワーク環境が悪かった)",
-            remarks: "林がメールで対応中",
-        },
-        {
-            start_date: "2022/04/11 19:00",
-            mentor_email: "ryudai.anada@keio.jp",
-            mentee_email: "bigdragon.06102001@gmail.com",
-            cancellation_reason: "システムエラー",
-            remarks: "林がメールで対応中",
-        },
-        {
-            start_date: "2022/04/12 20:00",
-            mentor_email: "ryudai.anada@keio.jp",
-            mentee_email: "bigdragon.06102001@gmail.com",
-            cancellation_reason: "その他(相手のネットワーク環境が悪かった)",
-            remarks: "林がメールで対応中",
-        },
     ];
     return (
         <div className="w-full h-full">
