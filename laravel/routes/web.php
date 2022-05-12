@@ -26,7 +26,7 @@ Route::get('/mentee/register', 'HomeController@MenteeRegister')->name('mentee.re
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
 
-Route::get('/admin', 'AdminController@index')->name('admin.index');
+Route::get('/admin{any}', 'AdminController@index')->where('any', '.*')->name('admin.index');
 
 Route::get('/schedule-test', function () {
   return view('schedule.index');
