@@ -88,7 +88,7 @@
                                     <div class="border bg-red-500 text-white text-xs px-4 pt-1 rounded ml-2">必須</div>
                                 </div>
                                  <div class="col-md-6 flex">
-                                     <input id="" type="number" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded form-control" name="password_confirmation">
+                                     <input type="number" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded form-control" name="password_confirmation">
                                  </div>
                              </div>
 
@@ -98,7 +98,7 @@
                                     <div class="border bg-red-500 text-white text-xs px-4 pt-1 rounded ml-2">必須</div>
                                 </div>
                                  <div class="col-md-6 flex">
-                                     <input id="m" type="url" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded form-control" name="" placeholder="https://example.com" >
+                                     <input type="url" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded form-control" name="" placeholder="https://example.com" >
                                  </div>
                              </div>
 

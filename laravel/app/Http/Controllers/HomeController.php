@@ -30,6 +30,7 @@ class HomeController extends Controller
     {
         return view('auth.MenteeRegister');
     }
+
     public function MenterRegister()
     {
         return view('auth.menter_register');
