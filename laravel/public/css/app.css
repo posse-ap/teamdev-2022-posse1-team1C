@@ -612,6 +612,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .box-border {
   box-sizing: border-box;
 }
@@ -714,6 +717,51 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-0 {
   width: 0px;
 }
+.w-\[200\%\] {
+  width: 200%;
+}
+.w-\[150\%\] {
+  width: 150%;
+}
+.w-2\/12 {
+  width: 16.666667%;
+}
+.w-2\/6 {
+  width: 33.333333%;
+}
+.w-4\/6 {
+  width: 66.666667%;
+}
+.w-1\/6 {
+  width: 16.666667%;
+}
+.w-\[50\%\] {
+  width: 50%;
+}
+.w-\[20\%\] {
+  width: 20%;
+}
+.w-\[40\%\] {
+  width: 40%;
+}
+.w-\[180\%\] {
+  width: 180%;
+}
+.w-\[15\%\] {
+  width: 15%;
+}
+.w-\[45\%\] {
+  width: 45%;
+}
+.w-\[25\%\] {
+  width: 25%;
+}
+.w-\[170\%\] {
+  width: 170%;
+}
+.w-\[5\%\] {
+  width: 5%;
+}
 .max-w-sm {
   max-width: 24rem;
 }
@@ -755,6 +803,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .overflow-x-auto {
   overflow-x: auto;
 }
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -769,6 +826,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .rounded-lg {
   border-radius: 0.5rem;
+}
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 .border {
   border-width: 1px;
@@ -959,6 +1019,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-16 {
   padding-bottom: 4rem;
 }
+.pl-5 {
+  padding-left: 1.25rem;
+}
 .text-center {
   text-align: center;
 }
@@ -1072,6 +1135,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:border-blue-200:focus {
   --tw-border-opacity: 1;
   border-color: rgb(191 219 254 / var(--tw-border-opacity));
+}
+
+.active\:border-blue-100:active {
+  --tw-border-opacity: 1;
+  border-color: rgb(219 234 254 / var(--tw-border-opacity));
+}
+
+.active\:border-red-300:active {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 165 165 / var(--tw-border-opacity));
 }
 
 .group:hover .group-hover\:pointer-events-auto {

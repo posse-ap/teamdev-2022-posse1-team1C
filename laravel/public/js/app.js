@@ -2300,9 +2300,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _DoughnutChart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DoughnutChart */ "./resources/js/components/admin/home/DoughnutChart.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _DoughnutChart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DoughnutChart */ "./resources/js/components/admin/home/DoughnutChart.js");
+/* harmony import */ var _ValueContainerWrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ValueContainerWrapper */ "./resources/js/components/admin/home/ValueContainerWrapper.js");
+/* harmony import */ var _Checklist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Checklist */ "./resources/js/components/admin/home/Checklist.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -2310,60 +2312,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AdminHome = function AdminHome() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     className: "flex h-full",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("section", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("section", {
       className: "w-2/3 h-full flex flex-col",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "flex text-center gap-5",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "w-1/3 bg-white py-5 rounded-md shadow-lg font-bold text-[#13B1C0]",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-            children: "\u4ECA\u6708\u306E\u65B0\u898F\u30E1\u30F3\u30C6\u30A3\u30FC\u6570"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            className: "text-3xl my-1 text-black",
-            children: "54"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            children: "\u4EBA"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "w-1/3 bg-white py-5 rounded-md shadow-lg font-bold text-[#13B1C0]",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-            children: "\u7D2F\u8A08\u30E1\u30F3\u30C6\u30A3\u30FC\u6570"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            className: "text-3xl my-1 text-black",
-            children: "125"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            children: "\u4EBA"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "w-1/3 bg-white py-5 rounded-md shadow-lg font-bold text-[#13B1C0]",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-            children: "\u76F8\u8AC7\u6210\u7ACB\u6570"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            className: "text-3xl my-1 text-black",
-            children: "36"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-            children: "\u4EBA"
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "w-full h-full mt-8 flex flex-col bg-white rounded-md shadow-lg py-5",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("h2", {
-          className: "font-bold text-xl ml-5 mb-2",
-          children: ["\u30C1\u30B1\u30C3\u30C8\u8FD4\u5374\u306B\u3042\u305F\u308A", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "\u4E8B\u5B9F\u78BA\u8A8D\u304C\u5FC5\u8981\u306A\u76F8\u8AC7\u4E00\u89A7"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          className: "w-full h-full"
-        })]
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_ValueContainerWrapper__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "w-full h-full mt-8 flex flex-col bg-white rounded-md shadow-lg py-5 px-5 overflow-scroll",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("h2", {
+          className: "font-bold text-xl mb-2",
+          children: ["\u30C1\u30B1\u30C3\u30C8\u8FD4\u5374\u306B\u3042\u305F\u308A", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), "\u4E8B\u5B9F\u78BA\u8A8D\u304C\u5FC5\u8981\u306A\u76F8\u8AC7\u4E00\u89A7"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Checklist__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("section", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("section", {
       className: "w-1/3 bg-white rounded-md shadow-lg ml-10",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
         className: "font-bold text-xl ml-5 mt-5",
         children: "\u4E0D\u6210\u7ACB\u7406\u7531"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "mt-10",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_DoughnutChart__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_DoughnutChart__WEBPACK_IMPORTED_MODULE_1__["default"], {})
       })]
     })]
   });
@@ -2371,9 +2338,156 @@ var AdminHome = function AdminHome() {
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdminHome);
 
-if (document.getElementById("admin_home")) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(AdminHome, {}), document.getElementById("admin_home"));
-}
+/***/ }),
+
+/***/ "./resources/js/components/admin/home/Checklist.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/admin/home/Checklist.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ChecklistCell__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChecklistCell */ "./resources/js/components/admin/home/ChecklistCell.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+var Checklist = function Checklist() {
+  var data = [{
+    start_date: "2022/04/11 19:00",
+    mentor_email: "ryudai.anada@keio.jp",
+    mentee_email: "bigdragon.06102001@gmail.com",
+    cancellation_reason: "システムエラー",
+    remarks: "林がメールで対応中"
+  }, {
+    start_date: "2022/04/12 20:00",
+    mentor_email: "ryudai.anada@keio.jp",
+    mentee_email: "bigdragon.06102001@gmail.com",
+    cancellation_reason: "その他(相手のネットワーク環境が悪かった)",
+    remarks: "林がメールで対応中"
+  }, {
+    start_date: "2022/04/11 19:00",
+    mentor_email: "ryudai.anada@keio.jp",
+    mentee_email: "bigdragon.06102001@gmail.com",
+    cancellation_reason: "システムエラー",
+    remarks: "林がメールで対応中"
+  }, {
+    start_date: "2022/04/12 20:00",
+    mentor_email: "ryudai.anada@keio.jp",
+    mentee_email: "bigdragon.06102001@gmail.com",
+    cancellation_reason: "その他(相手のネットワーク環境が悪かった)",
+    remarks: "林がメールで対応中"
+  }, {
+    start_date: "2022/04/11 19:00",
+    mentor_email: "ryudai.anada@keio.jp",
+    mentee_email: "bigdragon.06102001@gmail.com",
+    cancellation_reason: "システムエラー",
+    remarks: "林がメールで対応中"
+  }, {
+    start_date: "2022/04/12 20:00",
+    mentor_email: "ryudai.anada@keio.jp",
+    mentee_email: "bigdragon.06102001@gmail.com",
+    cancellation_reason: "その他(相手のネットワーク環境が悪かった)",
+    remarks: "林がメールで対応中"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "w-full h-full",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+      className: "flex w-[170%] gap-5 mt-5 font-bold text-[#13B1C0]",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+        className: "w-[5%]",
+        children: "\u756A\u53F7"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+        className: "w-[15%]",
+        children: "\u76F8\u8AC7\u65E5\u6642"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
+        className: "w-[40%]",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          children: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+        className: "w-[20%]",
+        children: "\u76F8\u8AC7\u72B6\u6CC1"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+        className: "w-[20%]",
+        children: "\u5099\u8003"
+      })]
+    }), data.map(function (datum, key) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_ChecklistCell__WEBPACK_IMPORTED_MODULE_1__["default"], _objectSpread({
+        number: key
+      }, datum), key);
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Checklist);
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/home/ChecklistCell.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/admin/home/ChecklistCell.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var ChecklistCell = function ChecklistCell(props) {
+  var remarksRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(props.remarks);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+    className: "flex w-[170%] gap-5 mt-5",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+      className: "w-[5%]",
+      children: ["No.", props.number + 1]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+      className: "w-[15%]",
+      children: [props.start_date, "~"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+      className: "w-[40%]",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+        children: ["\u30E1\u30F3\u30BF\u30FC\uFF1A", props.mentor_email]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+        children: ["\u30E1\u30F3\u30C6\u30A3\u30FC\uFF1A", props.mentee_email]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+      className: "w-[20%]",
+      children: props.cancellation_reason
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+      className: "w-[20%]",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("textarea", {
+        defaultValue: remarksRef.current,
+        className: "border-2 rounded resize-none",
+        onChange: function onChange(newRemarks) {
+          return remarksRef.current = newRemarks;
+        }
+      })
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChecklistCell);
 
 /***/ }),
 
@@ -2459,6 +2573,89 @@ if (document.getElementById("doughnut_chart")) {
 
 /***/ }),
 
+/***/ "./resources/js/components/admin/home/ValueContainer.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/admin/home/ValueContainer.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var ValueContainer = function ValueContainer(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "w-1/3 bg-white py-5 rounded-md shadow-lg font-bold text-[#13B1C0]",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+      children: props.title
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      className: "text-3xl my-1 text-black",
+      children: props.value
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: props.unit
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ValueContainer);
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/home/ValueContainerWrapper.js":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/admin/home/ValueContainerWrapper.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _ValueContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ValueContainer */ "./resources/js/components/admin/home/ValueContainer.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var ValueContainerWrapper = function ValueContainerWrapper() {
+  var data = [{
+    title: "今月の新規メンター数",
+    value: 54,
+    unit: "人"
+  }, {
+    title: "累計メンティー数",
+    value: 125,
+    unit: "人"
+  }, {
+    title: "相談成立率",
+    value: 36,
+    unit: "%"
+  }];
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "flex text-center gap-5",
+    children: data.map(function (datum) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_ValueContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        title: datum.title,
+        value: datum.value,
+        unit: datum.unit
+      });
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ValueContainerWrapper);
+
+/***/ }),
+
 /***/ "./resources/js/components/admin/payment/AdminPayment.js":
 /*!***************************************************************!*\
   !*** ./resources/js/components/admin/payment/AdminPayment.js ***!
@@ -2471,26 +2668,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 var AdminPayment = function AdminPayment() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "w-full h-full",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Outlet, {})
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Outlet, {})
   });
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdminPayment);
-
-if (document.getElementById("admin_payment")) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(AdminPayment, {}), document.getElementById("admin_payment"));
-}
 
 /***/ }),
 
@@ -2543,28 +2734,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 var Monthly = function Monthly() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     className: "block w-full h-full bg-white rounded-md shadow-lg px-10 pt-10",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
       className: "font-bold text-2xl",
       children: "\u4ECA\u6708\u306E\u304A\u652F\u6255\u3044"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {})]
   });
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Monthly);
-
-if (document.getElementById("monthly")) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Monthly, {}), document.getElementById("monthly"));
-}
 
 /***/ }),
 

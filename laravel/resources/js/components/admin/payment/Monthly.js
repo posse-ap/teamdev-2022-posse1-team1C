@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 const Monthly = () => {
     return (
@@ -11,7 +10,3 @@ const Monthly = () => {
 };
 
 export default Monthly;
-
-if (document.getElementById("monthly")) {
-    ReactDOM.render(<Monthly />, document.getElementById("monthly"));
-}
