@@ -2570,7 +2570,8 @@ var Peer = __webpack_require__(/*! skyway-js */ "./node_modules/skyway-js/dist/s
 var Call = function Call() {
   var _navigator$mediaDevic;
 
-  var localStream; // カメラ映像・音声取得
+  var localStream;
+  var audioTrack; // カメラ映像・音声取得
 
   (_navigator$mediaDevic = navigator.mediaDevices) === null || _navigator$mediaDevic === void 0 ? void 0 : _navigator$mediaDevic.getUserMedia({
     video: false,
@@ -2580,7 +2581,10 @@ var Call = function Call() {
     var audioElm = document.getElementById('my-audio');
     audioElm.srcObject = stream; // 着信時に相手に音声情報を返せるように、グローバル変数に保存しておく
 
-    localStream = stream;
+    localStream = stream; // 最初はミュート状態にする
+
+    audioTrack = localStream.getAudioTracks()[0];
+    audioTrack.enabled = false;
   })["catch"](function (error) {
     // 失敗時にはエラーログを出力
     console.error('mediaDevice.getUserMedia() error:', error);
@@ -2606,6 +2610,13 @@ var Call = function Call() {
 
 
   document.getElementById('ismute').onclick = function () {
+    if (audioTrack.enabled) {
+      audioTrack.enabled = false;
+    } else {
+      audioTrack.enabled = true;
+    }
+
+    ;
     var audio = document.getElementById('my-audio');
     audio.classList.toggle('muted');
     var mute = document.getElementById('mute');

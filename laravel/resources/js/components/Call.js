@@ -6,6 +6,7 @@ const Peer = require('skyway-js');
 const Call = () => {
     
     let localStream;
+    let audioTrack;
     
     // カメラ映像・音声取得
     navigator.mediaDevices?.getUserMedia({
@@ -18,6 +19,9 @@ const Call = () => {
         audioElm.srcObject = stream;
         // 着信時に相手に音声情報を返せるように、グローバル変数に保存しておく
         localStream = stream;
+        // 最初はミュート状態にする
+        audioTrack = localStream.getAudioTracks()[0];
+        audioTrack.enabled = false;
     }).catch(error => {
         // 失敗時にはエラーログを出力
         console.error('mediaDevice.getUserMedia() error:', error);
@@ -46,6 +50,11 @@ const Call = () => {
 
     //ｍute処理
     document.getElementById('ismute').onclick = () => {
+            if(audioTrack.enabled){
+                audioTrack.enabled = false;
+            }else{
+                audioTrack.enabled = true;
+            };
         const audio = document.getElementById('my-audio');
         audio.classList.toggle('muted');
         const mute = document.getElementById('mute');
