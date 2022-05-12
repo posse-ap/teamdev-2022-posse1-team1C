@@ -31,8 +31,8 @@
             }
         }, false);
 
-      const txtPass2 = document.getElementById("password-confirm");
-      const btnEye2 = document.getElementById("buttonEye2");
+        const txtPass2 = document.getElementById("password-confirm");
+        const btnEye2 = document.getElementById("buttonEye2");
         btnEye2.addEventListener('click', function() {
           if (txtPass2.type === "text") {
             txtPass2.type = "password";
