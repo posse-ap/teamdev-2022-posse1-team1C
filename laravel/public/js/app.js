@@ -2324,12 +2324,12 @@ var AdminHome = function AdminHome() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Checklist__WEBPACK_IMPORTED_MODULE_3__["default"], {})]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("section", {
-      className: "w-1/3 bg-white rounded-md shadow-lg ml-10",
+      className: "w-1/3 bg-white rounded-md shadow-lg ml-10 relative",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
         className: "font-bold text-xl ml-5 mt-5",
         children: "\u4E0D\u6210\u7ACB\u7406\u7531"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: "mt-10",
+        className: "relative top-1/2 -translate-y-[calc(50%+2.5rem)]",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_DoughnutChart__WEBPACK_IMPORTED_MODULE_1__["default"], {})
       })]
     })]
@@ -2454,7 +2454,7 @@ var ChecklistCell = function ChecklistCell(props) {
       className: "w-[20%]",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("textarea", {
         defaultValue: remarksRef.current,
-        className: "border-2 rounded resize-none",
+        className: "border-2 rounded resize-none outline-none focus:border-[#13B1C0]",
         onChange: function onChange(newRemarks) {
           return remarksRef.current = newRemarks;
         }
@@ -2480,17 +2480,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/chart.esm.js");
-/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-chartjs-2 */ "./node_modules/react-chartjs-2/dist/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! chartjs-plugin-datalabels */ "./node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.esm.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_chartjs_2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-chartjs-2 */ "./node_modules/react-chartjs-2/dist/index.js");
+/* harmony import */ var chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! chartjs-plugin-datalabels */ "./node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.esm.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 
-
-chart_js__WEBPACK_IMPORTED_MODULE_1__.Chart.register(chart_js__WEBPACK_IMPORTED_MODULE_1__.ArcElement, chart_js__WEBPACK_IMPORTED_MODULE_1__.Tooltip, chart_js__WEBPACK_IMPORTED_MODULE_1__.Legend, chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_3__["default"]);
+chart_js__WEBPACK_IMPORTED_MODULE_1__.Chart.register(chart_js__WEBPACK_IMPORTED_MODULE_1__.ArcElement, chart_js__WEBPACK_IMPORTED_MODULE_1__.Tooltip, chart_js__WEBPACK_IMPORTED_MODULE_1__.Legend, chartjs_plugin_datalabels__WEBPACK_IMPORTED_MODULE_2__["default"]);
 var options = {
   responsive: true,
   plugins: {
@@ -2532,9 +2530,9 @@ var DoughnutChart = function DoughnutChart() {
       borderWidth: 0
     }]
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "relative w-full",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_5__.Doughnut, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_4__.Doughnut, {
       data: chartData,
       options: options
     })
@@ -2542,10 +2540,6 @@ var DoughnutChart = function DoughnutChart() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DoughnutChart);
-
-if (document.getElementById("doughnut_chart")) {
-  react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(DoughnutChart, {}), document.getElementById("doughnut_chart"));
-}
 
 /***/ }),
 
@@ -2618,12 +2612,12 @@ var ValueContainerWrapper = function ValueContainerWrapper() {
   }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "flex text-center gap-5",
-    children: data.map(function (datum) {
+    children: data.map(function (datum, key) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_ValueContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: datum.title,
         value: datum.value,
         unit: datum.unit
-      });
+      }, key);
     })
   });
 };
@@ -2673,10 +2667,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _PaymentList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PaymentList */ "./resources/js/components/admin/payment/PaymentList.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
+/* harmony import */ var _PaymentList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaymentList */ "./resources/js/components/admin/payment/PaymentList.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -2687,7 +2679,7 @@ var History = function History() {
     email: "chiyoko.chocochick@gmail.com",
     phone: "09033490834",
     ticket: 2,
-    paypay: "https://qr.paypay.ne.jp/76LucDdT0p8IpHv5",
+    paypay: "https://qr.paypay.ne.jp/PxuufFVZHSWXt1Hb",
     isPaid: true
   }, {
     name: "穴田竜大",
@@ -2697,7 +2689,7 @@ var History = function History() {
     paypay: "https://qr.paypay.ne.jp/vN8WpVoN90JbCMuy",
     isPaid: false
   }];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_PaymentList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_PaymentList__WEBPACK_IMPORTED_MODULE_1__["default"], {
     data: data,
     title: "\u5C65\u6B74"
   });
@@ -2731,7 +2723,7 @@ var Monthly = function Monthly() {
     email: "chiyoko.chocochick@gmail.com",
     phone: "09033490834",
     ticket: 2,
-    paypay: "https://qr.paypay.ne.jp/76LucDdT0p8IpHv5",
+    paypay: "https://qr.paypay.ne.jp/PxuufFVZHSWXt1Hb",
     isPaid: true
   }, {
     name: "穴田竜大",
@@ -2785,7 +2777,7 @@ var PaymentList = function PaymentList(props) {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "w-full h-full overflow-scroll pb-10",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
-        className: "flex w-[150%] gap-5 mt-5 text-center items-center font-bold text-[#13B1C0]",
+        className: "flex w-[150%] mt-5 text-center items-center font-bold text-[#13B1C0]",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
           className: "w-[10%]",
           children: "\u540D\u524D"
@@ -2848,58 +2840,133 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var PaymentListCell = function PaymentListCell(props) {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(props.isPaid),
       _useState2 = _slicedToArray(_useState, 2),
       paymentStatus = _useState2[0],
       setPaymentStatus = _useState2[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-    className: "flex w-[150%] gap-5 mt-5 text-center items-center",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-      className: "w-[10%]",
-      children: props.name
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-      className: "w-[25%]",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-          children: ["\u30E1\u30FC\u30EB\uFF1A", props.email]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-          children: ["\u96FB\u8A71\u756A\u53F7\uFF1A", props.phone]
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-      className: "w-[7%]",
-      children: [props.ticket, "\u679A"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-      className: "w-[8%]",
-      children: [props.ticket * 1000, "\u5186"]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-      className: "w-[25%]",
-      children: props.paypay
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-      className: "w-[15%]",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-        type: "button",
-        value: "QR\u30B3\u30FC\u30C9\u3092\u8868\u793A",
-        className: "shadow active:bg-[#E2F0F2] hover:shadow-md py-2 px-3 cursor-pointer"
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-      className: "w-[10%]",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-        className: "cursor-pointer",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-          type: "checkbox",
-          checked: paymentStatus,
+  var modalRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  var qrRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+
+  var makeQRCode = function makeQRCode() {
+    if (paymentStatus) {
+      alert("お支払い済みです");
+    } else {
+      openModal();
+      new QRCode(qrRef.current, props.paypay);
+    }
+  };
+
+  var openModal = function openModal() {
+    var modalNode = modalRef.current;
+    modalNode.classList.remove("hidden");
+    modalNode.classList.add("block");
+  };
+
+  var closeModal = function closeModal() {
+    var modalNode = modalRef.current;
+    var qrNode = qrRef.current;
+    modalNode.classList.add("hidden");
+    modalNode.classList.remove("block");
+
+    while (qrNode.firstChild) {
+      qrNode.removeChild(qrNode.firstChild);
+    }
+  };
+
+  var confirmPayment = function confirmPayment() {
+    closeModal();
+    setPaymentStatus(true);
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+      className: "flex w-[150%] mt-5 text-center items-center",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+        className: "w-[10%]",
+        children: props.name
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+        className: "w-[25%]",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+            children: ["\u30E1\u30FC\u30EB\uFF1A", props.email]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+            children: ["\u96FB\u8A71\u756A\u53F7\uFF1A", props.phone]
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+        className: "w-[7%]",
+        children: [props.ticket, "\u679A"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+        className: "w-[8%]",
+        children: [props.ticket * 1000, "\u5186"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+        className: "w-[25%]",
+        children: props.paypay
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+        className: "w-[15%]",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+          type: "button",
+          value: "QR\u30B3\u30FC\u30C9\u3092\u8868\u793A",
+          className: "shadow active:bg-[#E2F0F2] hover:shadow-md py-2 px-3 cursor-pointer",
+          onClick: makeQRCode
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+        className: "w-[10%]",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
           className: "cursor-pointer",
-          onChange: function onChange() {
-            return setPaymentStatus(!paymentStatus);
-          }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-          className: "ml-1",
-          children: paymentStatus ? "お支払い済み" : "お支払い未完"
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "checkbox",
+            checked: paymentStatus,
+            className: "cursor-pointer",
+            onChange: function onChange() {
+              return setPaymentStatus(!paymentStatus);
+            }
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            className: "ml-1",
+            children: paymentStatus ? "お支払い済み" : "お支払い未完"
+          })]
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+      className: "absolute top-0 left-0 w-screen h-screen hidden",
+      ref: modalRef,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "w-full h-screen absolute top-0 left-0 bg-black opacity-20",
+        onClick: closeModal
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "text-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-10",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "flex mb-10",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "mr-10 my-auto",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              className: "mb-3 font-bold text-lg",
+              children: props.name
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+              children: [props.ticket * 1000, "\u5186"]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            ref: qrRef,
+            className: "w-64"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "flex gap-5 justify-center",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "button",
+            value: "\u304A\u652F\u6255\u3044\u5B8C\u4E86",
+            className: "shadow-md active:bg-[#E2F0F2] hover:shadow-md py-2 px-3 cursor-pointer font-bold text-[#13B1C0] text-xl",
+            onClick: confirmPayment
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "button",
+            value: "\u30AD\u30E3\u30F3\u30BB\u30EB",
+            className: "shadow-md active:bg-[#E2F0F2] hover:shadow-md py-2 px-3 cursor-pointer font-bold text-lg",
+            onClick: closeModal
+          })]
         })]
-      })
+      })]
     })]
   });
 };

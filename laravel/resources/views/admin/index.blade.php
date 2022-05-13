@@ -12,6 +12,7 @@
 
 <body>
     <div id="admin_wrapper"></div>
+    <script src="{{ asset('js/qrcode.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

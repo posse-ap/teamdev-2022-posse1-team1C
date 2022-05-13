@@ -1,7 +1,6 @@
 import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
-import ReactDOM from "react-dom";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
@@ -58,10 +57,3 @@ const DoughnutChart = () => {
 };
 
 export default DoughnutChart;
-
-if (document.getElementById("doughnut_chart")) {
-    ReactDOM.render(
-        <DoughnutChart />,
-        document.getElementById("doughnut_chart")
-    );
-}

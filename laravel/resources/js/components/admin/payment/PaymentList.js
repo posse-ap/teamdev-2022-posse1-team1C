@@ -6,7 +6,7 @@ const PaymentList = (props) => {
         <div className="w-full h-full bg-white rounded-md shadow-lg px-10 pt-10 flex flex-col">
             <h2 className="font-bold text-2xl">{props.title}</h2>
             <div className="w-full h-full overflow-scroll pb-10">
-                <ul className="flex w-[150%] gap-5 mt-5 text-center items-center font-bold text-[#13B1C0]">
+                <ul className="flex w-[150%] mt-5 text-center items-center font-bold text-[#13B1C0]">
                     <li className="w-[10%]">名前</li>
                     <li className="w-[25%]">個人情報</li>
                     <li className="w-[7%]">チケット数</li>

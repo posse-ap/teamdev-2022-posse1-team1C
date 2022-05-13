@@ -22,9 +22,10 @@ const ValueContainerWrapper = () => {
 
     return (
         <div className="flex text-center gap-5">
-            {data.map((datum) => {
+            {data.map((datum, key) => {
                 return (
                     <ValueContainer
+                        key={key}
                         title={datum.title}
                         value={datum.value}
                         unit={datum.unit}

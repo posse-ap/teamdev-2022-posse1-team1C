@@ -14,7 +14,7 @@ const ChecklistCell = (props) => {
             <li className="w-[20%]">
                 <textarea
                     defaultValue={remarksRef.current}
-                    className="border-2 rounded resize-none"
+                    className="border-2 rounded resize-none outline-none focus:border-[#13B1C0]"
                     onChange={(newRemarks) => (remarksRef.current = newRemarks)}
                 />
             </li>

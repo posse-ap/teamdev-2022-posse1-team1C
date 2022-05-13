@@ -17,9 +17,9 @@ const AdminHome = () => {
                     <Checklist />
                 </div>
             </section>
-            <section className="w-1/3 bg-white rounded-md shadow-lg ml-10">
+            <section className="w-1/3 bg-white rounded-md shadow-lg ml-10 relative">
                 <h2 className="font-bold text-xl ml-5 mt-5">不成立理由</h2>
-                <div className="mt-10">
+                <div className="relative top-1/2 -translate-y-[calc(50%+2.5rem)]">
                     <DoughnutChart />
                 </div>
             </section>

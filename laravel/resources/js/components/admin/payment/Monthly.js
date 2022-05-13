@@ -8,7 +8,7 @@ const Monthly = () => {
             email: "chiyoko.chocochick@gmail.com",
             phone: "09033490834",
             ticket: 2,
-            paypay: "https://qr.paypay.ne.jp/76LucDdT0p8IpHv5",
+            paypay: "https://qr.paypay.ne.jp/PxuufFVZHSWXt1Hb",
             isPaid: true,
         },
         {
