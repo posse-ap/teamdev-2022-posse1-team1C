@@ -42,9 +42,9 @@
                                     <div class="flex mb-6 mt-2 relative">
                                         <input id="password" type="password"
                                             class="bg-gray-100 w-full h-10 p-2 rounded @error('password') is-invalid @enderror"
-                                            name="password" required autocomplete="new-password">
+                                            name="password" required autocomplete="new-password" placeholder="Password">
                                         <span id="buttonEye"
-                                            class="fa fa-eye absolute -right-7 top-1/2 -translate-y-1/2"></span>
+                                            class="fa fa-eye absolute right-5 top-1/2 -translate-y-1/2"></span>
                                         @error('password')
                                             <span role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -61,7 +61,7 @@
                                             class="bg-gray-100 w-full h-10 p-2 rounded" name="password_confirmation"
                                             required autocomplete="new-password" placeholder="上と同じパスワードを入力してください">
                                         <span id="buttonEye2"
-                                            class="fa fa-eye absolute -right-7 top-1/2 -translate-y-1/2"></span>
+                                            class="fa fa-eye absolute right-5 top-1/2 -translate-y-1/2"></span>
                                     </div>
                                 </div>
 

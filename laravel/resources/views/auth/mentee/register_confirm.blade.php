@@ -50,7 +50,7 @@
                                 <div class="mb-0 flex justify-center items-center">
                                     <div>
                                         <button type="submit"
-                                            class="bg-teal-400 text-white mb-10 ml-2 mt-10 px-40 py-2 flex justify-center items-center rounded shadow-lg">
+                                            class="bg-teal-400 text-white mb-10 mt-10 px-40 py-2 flex justify-center items-center rounded shadow-lg">
                                             {{ __('無料で会員登録する') }}</button>
                                         @if (Route::has('password.request'))
                                             <a class="text-teal-400 flex justify-center items-center"
