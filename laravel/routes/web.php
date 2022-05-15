@@ -22,8 +22,13 @@ Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/MenteeRegister', 'HomeController@MenteeRegister')->name('home');
+Route::get('/mentee/register', 'MenteeController@register')->name('mentee.register');
+Route::get('/mentee/register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
 Route::get('/search', 'SearchController@index')->name('search');
 Route::get('/search/result', 'SearchController@result')->name('search_result');
+
+Route::get('/schedule-test', function () {
+  return view('schedule.index');
+});
