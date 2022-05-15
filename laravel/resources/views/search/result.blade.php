@@ -1,6 +1,6 @@
 @extends('layouts.BeforeLoginBase')
 
-@section('title', 'メンター検索画面')
+@section('title', 'メンター検索結果')
 
 @section('content')
     {{-- <div class="w-8/12 h-2/4 flex justify-center items-center">
@@ -14,33 +14,31 @@
             <input type="submit" value="検索する">
         </form>
     </div> --}}
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="container bg-[#F4F8FA]">
+        <div class="row justify-content-center ">
+            <p>10人のメンターが見つかりました。<br></p>
             <div class="col-md-8">
-                <div class="card flex justify-center items-center py-20 ml-20">
+                <div class="card flex justify-center items-center py-20 px-20">
                     {{-- <div class="card-header">{{ __('Login') }}</div> --}}
-
-                    <div class="card-body bg-white inline-block px-20 py-20">
-
-                        <div class="pb-5">
+                    <div class="card-body bg-white inline-block px-10 py-8">
+                        {{-- <div class="pb-5">
                             <p class="text-3xl font-bold flex pb-4">メンターを探す</p>
                             <div class="border-b-2 px-64"></div>
-                        </div>
-
-                        <form method="GET" action="{{ route('search_result') }}">
-                            @csrf
-                            <div class="form-group row">
-                                <label for="email"
-                                    class="col-md-4 col-form-label text-gray-300 text-md-right font-bold flex items-center mr-5">{{ __('社名') }}</label>
-
-                                <div class="col-md-6 flex justify-center items-center">
-                                    <input id="" type="text"
-                                        class="bg-white outline outline-gray-400 mb-6 mt-2 w-full h-10 p-2 form-control" name="company"
-                                        value="" placeholder="社名を入力してください">
-                                </div>
+                        </div> --}}
+                        @foreach ($users as $user)
+                        <div class="form-group row">
+                            <div class="col-md-6 flex justify-center items-center">
+                                <img class="mr-10" src="" alt="">
+                                <p class="mr-10 text-3xl font-bold">匿名くコ:彡</p>
+                                <p class="mr-10 text-3xl font-bold">{{$user->company}} <br> {{$user->department}}</p>
+                                <p class="mr-10 text-3xl font-bold ">未依頼</p>
+                                <p class="mr-10 text-xl font-bold">03/28（月）<br> 19:00~19:10</p>
+                                <button class="text-3xl font-bold"><i class="">チャット</i></button>
                             </div>
+                        </div>
+                        @endforeach
 
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 <label for="email"
                                     class="col-md-4 col-form-label text-gray-300 text-md-right font-bold flex items-center mr-5">{{ __('部署名') }}</label>
 
@@ -48,7 +46,7 @@
                                     <input id="" type="text"
                                         class="bg-white outline outline-gray-400 mb-6 mt-2 w-full h-10 p-2 form-control" name="depertment"
                                         value="" placeholder="部署名を入力してください">
-                                </div>
+                                </div> --}}
                             </div>
 
                             {{-- <div class="form-group row">
@@ -61,14 +59,13 @@
                                         required autocomplete="current-password" placeholder="部署名を入力してください">
                                 </div>
                             </div> --}}
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 <div class="col-md-6 flex justify-center items-center">
                                     <button class=" bg-gradient-to-r from-sky-500 to-indigo-500 outline-gray-500 text-white text-2xl font-bold w-full h-10 mt-2  rounded form-control">
                                         <i class="fas fa-search text-white "></i> 検索する
                                     </button>
                                 </div>
-                            </div>
-                        </form>
+                            </div> --}}
                     </div>
                 </div>
             </div>

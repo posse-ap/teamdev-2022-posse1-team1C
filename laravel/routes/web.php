@@ -26,3 +26,4 @@ Route::get('/MenteeRegister', 'HomeController@MenteeRegister')->name('home');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
 Route::get('/search', 'SearchController@index')->name('search');
+Route::get('/search/result', 'SearchController@result')->name('search_result');
