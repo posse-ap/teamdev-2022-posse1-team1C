@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ToMenteeRequestCancelMail extends Mailable
+class ToBothRequestCancelMail extends Mailable
 {
     use Queueable, SerializesModels;
 

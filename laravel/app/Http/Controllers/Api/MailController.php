@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ToMentorScheduleAdjustmentRemindMail;
-use App\Mail\ToMenteeRequestCancelMail;
+use App\Mail\ToBothRequestCancelMail;
 use App\Mail\ToMenteeRequestConfirmMail;
 
 class MailController extends Controller
