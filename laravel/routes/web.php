@@ -37,3 +37,5 @@ Route::get('mail/both-request-cancel', 'Api\MailController@sendToBothRequestCanc
 Route::post('mail/both-request-cancel', 'Api\MailController@sendToBothRequestCancelMail');
 Route::get('mail/mentee-request-confirm', 'Api\MailController@sendToMenteeRequestConfirmMail');
 Route::post('mail/mentee-request-confirm', 'Api\MailController@sendToMenteeRequestConfirmMail');
+Route::get('mail/both-the-day-before-remind', 'Api\MailController@sendToBothTheDayBeforeRemindMail');
+Route::post('mail/both-the-day-before-remind', 'Api\MailController@sendToBothTheDayBeforeRemindMail');
