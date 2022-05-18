@@ -76,7 +76,9 @@ class SearchController extends Controller
             }
         
             $users = $query->get()->sortByDesc('created_at');
-        
-            return view('search.result', compact('users'));
+            
+            $users_number = count($users);
+            
+            return view('search.result', compact('users','users_number'));
         }
     }
