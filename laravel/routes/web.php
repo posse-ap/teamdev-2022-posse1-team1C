@@ -28,6 +28,7 @@ Route::get('/mentee/register-confirm', 'MenteeController@register_confirm')->nam
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
 Route::get('/search', 'SearchController@index')->name('search');
 Route::get('/search/result', 'SearchController@result')->name('search_result');
+Route::get('/search/result/ticket', 'TicketController@index')->name('mentee.ticket');
 
 Route::get('/schedule-test', function () {
   return view('schedule.index');

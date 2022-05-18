@@ -33,7 +33,7 @@
                                 <p class="mr-10 text-2xl">{{$user->company}} <br> {{$user->department}}</p>
                                 <p class="mr-10 text-2xl">未依頼</p>
                                 <p class="mr-10 text-xl">03/28（月）<br> 19:00~19:10</p>
-                                <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-2/3"><i class="fa fa-commenting-o">チャット</i></button>
+                                <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-2/3"><i class="fa fa-commenting-o" onclick="location.href='{{ route('mentee.ticket') }}' ">チャット</i></button>
                             </div>
                         </div>
                     </div>
