@@ -13,19 +13,23 @@ use App\Mail\ToBothTheDayBeforeRemindMail;
 
 class MailController extends Controller
 {
-    public function sendToMentorScheduleAdjustmentRemindMail(Request $request)
+    public function sendToMentorScheduleAdjustmentRemindMail(
+        // Request $request
+        )
     {
-        $content = $request->input('content'); 
+        // $content = $request->input('content');
         $user = auth()->user();
 	
-	Mail::to("testMentor@com")->send(new ToMentorScheduleAdjustmentRemindMail($content));
+	Mail::to("testMentor@com")->send(new ToMentorScheduleAdjustmentRemindMail(
+        // $content
+    ));
 
     // メール送信後の処理を以下に書く
     }
 
     public function sendToBothRequestCancelMail(Request $request)
     {
-        $content = $request->input('content'); 
+        $content = $request->input('content');
         $user = auth()->user();
         $emails = [
             'testMentee@com',
@@ -38,7 +42,7 @@ class MailController extends Controller
 
     public function sendToMenteeRequestConfirmMail(Request $request)
     {
-        $content = $request->input('content'); 
+        $content = $request->input('content');
         $user = auth()->user();
 	
 	Mail::to("testMentee@com")->send(new ToMenteeRequestConfirmMail($content));
@@ -48,7 +52,7 @@ class MailController extends Controller
 
     public function sendToBothTheDayBeforeRemindMail(Request $request)
     {
-        $content = $request->input('content'); 
+        $content = $request->input('content');
         $user = auth()->user();
         $emails = [
             'testMentee@com',
