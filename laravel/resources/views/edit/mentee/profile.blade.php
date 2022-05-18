@@ -1,4 +1,4 @@
-@extends('layouts.before_login_base')
+@extends('layouts.after_login_base')
 
 @section('title', 'メンプロフィール編集')
 
