@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Schedule_statusesTableSeeder extends Seeder
+class ScheduleAdjustmentsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

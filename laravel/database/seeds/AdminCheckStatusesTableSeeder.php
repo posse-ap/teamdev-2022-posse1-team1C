@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Calling_logsTableSeeder extends Seeder
+class AdminCheckStatusesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
