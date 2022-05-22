@@ -20,4 +20,18 @@ class MenteeController extends Controller
     {
         return view('edit.mentee.profile');
     }
+    public function survey_question()
+    {
+        return view('survey.question');
+    }
+
+    public function survey_reason()
+    {
+        return view('survey.reason');
+    }
+
+    public function survey_cancel_reason()
+    {
+        return view('survey.cancel_reason');
+    }
 }

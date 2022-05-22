@@ -25,6 +25,10 @@ Auth::routes();
 Route::get('/mentee/register', 'MenteeController@register')->name('mentee.register');
 Route::get('/mentee/register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
 Route::get('/mentee/profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
+Route::get('/mentee/question', 'MenteeController@survey_question')->name('mentee.survey.question');
+Route::get('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
+Route::get('/mentee/cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
+
 Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
 Route::get('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register');
 
