@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 // require
 const Peer = require('skyway-js');
 
@@ -30,7 +31,7 @@ const Call = () => {
     
     //Peer作成
     const peer = new Peer({
-        key: '3509b80b-8a54-44d8-bcd6-5c5bcc36a50c',
+        key: process.env.MIX_PEER_ID,
         debug: 3
     });
     

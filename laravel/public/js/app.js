@@ -2594,7 +2594,7 @@ var Call = function Call() {
   }); //Peer作成
 
   var peer = new Peer({
-    key: '3509b80b-8a54-44d8-bcd6-5c5bcc36a50c',
+    key: "3509b80b-8a54-44d8-bcd6-5c5bcc36a50c",
     debug: 3
   }); //PeerID取得
 
