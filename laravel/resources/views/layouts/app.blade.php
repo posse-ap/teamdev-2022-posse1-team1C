@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,51 +16,56 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         #textPassword {
-          border: none; /* デフォルトの枠線を消す */
+            border: none;
+            /* デフォルトの枠線を消す */
         }
+
         #fieldPassword {
-          border-width: thin;
-          border-style: solid;
-          width: 200px;
+            border-width: thin;
+            border-style: solid;
+            width: 200px;
         }
-      </style>
+
+    </style>
 </head>
+
 <body>
 
-<div class="py-5">
-    @include('includes.beforeLoginHeader')
-</div>
+    <header>
+        @include('includes.before_login_header')
+    </header>
 
-<div id="app">
-    <main class="py-2 bg-gray-100">
-        @yield('content')
-    </main>
-</div>
+    <div id="app">
+        <main class="py-2 bg-gray-100">
+            @yield('content')
+        </main>
+    </div>
 
-<div class=".bg-white">
-    @include('includes.footer')
-</div>
+    <div class=".bg-white">
+        @include('includes.footer')
+    </div>
 
-<script>
-   
-      var txtPass = document.getElementById("password");
-      var btnEye = document.getElementById("buttonEye");
-      btnEye.addEventListener('click', function() {
-          if (txtPass.type === "text") {
-            txtPass.type = "password";
-            btnEye.className = "fa fa-eye";
-          } else {
-            txtPass.type = "text";
-            btnEye.className = "fa fa-eye-slash";
-          }
-      }, false);
-    
-  </script>
+    <script>
+        var txtPass = document.getElementById("password");
+        var btnEye = document.getElementById("buttonEye");
+        btnEye.addEventListener('click', function() {
+            if (txtPass.type === "text") {
+                txtPass.type = "password";
+                btnEye.classList.add("fa-eye");
+                btnEye.classList.remove("fa-eye-slash");
+            } else {
+                txtPass.type = "text";
+                btnEye.classList.remove("fa-eye");
+                btnEye.classList.add("fa-eye-slash");
+            }
+        }, false);
+    </script>
 </body>
+
 </html>
