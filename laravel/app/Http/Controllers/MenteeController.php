@@ -15,4 +15,9 @@ class MenteeController extends Controller
     {
         return view('auth.mentee.register_confirm');
     }
+
+    public function edit_profile()
+    {
+        return view('edit.mentee.profile');
+    }
 }
