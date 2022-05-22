@@ -20,4 +20,9 @@ class MenteeController extends Controller
     {
         return view('edit.mentee.profile');
     }
+
+    public function inquiry()
+    {
+        return view('auth.mentee.inquiry');
+    }
 }
