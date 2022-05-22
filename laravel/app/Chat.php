@@ -11,4 +11,10 @@ class Chat extends Model
     'sender',
     'content',
   ];
+
+  public function threads()
+    {
+        return $this->belongsTo(Thread::class);
+    }
+
 }
