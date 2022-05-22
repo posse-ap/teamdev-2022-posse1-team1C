@@ -52,7 +52,7 @@
                 </p>
             </div>
             <img src="{{ asset('img/pig-image.png') }}"
-                class="mt-10 ml-10 w-4/12 overflow-x-auto space-x-2 whitespace-nowrap w-full" alt="">
+                class="mt-10 ml-10 w-4/12 overflow-x-auto space-x-2 whitespace-nowrap" alt="">
         </div>
 
         <div class="border-solid border border-gray-100 mt-20 w-4/12 container mx-auto"></div>

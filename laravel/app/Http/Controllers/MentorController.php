@@ -11,4 +11,8 @@ class MentorController extends Controller
         return view('auth.mentor.register_confirm');
     }
 
+    public function edit_profile()
+    {
+        return view('edit.mentor.profile');
+    }
 }
