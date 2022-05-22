@@ -28,6 +28,10 @@ Route::get('/mentee/profile/edit', 'MenteeController@edit_profile')->name('mente
 Route::get('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
+
+//Call
+Route::get('/call', 'CallController@index')->name('call');
+
 Route::get('/search', 'SearchController@index')->name('search');
 Route::post('/search', 'SearchController@result')->name('search_result');
 Route::get('/search/result/ticket', 'TicketController@index')->name('mentee.ticket');
