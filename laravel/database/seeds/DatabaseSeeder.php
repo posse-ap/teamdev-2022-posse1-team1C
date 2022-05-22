@@ -15,5 +15,11 @@ class DatabaseSeeder extends Seeder
     $this->call(ChatsTableSeeder::class);
     $this->call(MentorsTableSeeder::class);
     $this->call(UsersTableSeeder::class);
+    $this->call(Admin_check_statusesTableSeeder::class);
+    $this->call(Calling_logsTableSeeder::class);
+    $this->call(FeedbacksTableSeeder::class);
+    $this->call(Schedule_adjustmentsTableSeeder::class);
+    $this->call(Schedule_statusesTableSeeder::class);
+    $this->call(SchedulesTableSeeder::class);
   }
 }
