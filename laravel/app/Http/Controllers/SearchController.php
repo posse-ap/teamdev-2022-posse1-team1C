@@ -11,6 +11,7 @@ class SearchController extends Controller
 {
     public function index()
     {
+        
         return view('search.index');
     }
 
@@ -79,6 +80,6 @@ class SearchController extends Controller
             
             $users_number = count($users);
             
-            return view('search.result', compact('users','users_number'));
+            return view('search.index', compact('users','users_number'));
         }
     }
