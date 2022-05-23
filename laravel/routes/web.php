@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-  return view('welcome');
+    return view('welcome');
 });
 
 Route::get('/top', 'TopController@top')->name('top');
@@ -35,10 +35,11 @@ Route::get('/call', 'CallController@index')->name('call');
 
 Route::get('/search', 'SearchController@index')->name('search');
 Route::post('/search', 'SearchController@result')->name('search_result');
-Route::get('/search/result/ticket', 'TicketController@index')->name('mentee.ticket');
+Route::get('/ticket', 'TicketController@index')->name('mentee.ticket');
+Route::post('/ticket/purchase', 'TicketController@purchase')->name('ticket.purchase');
 
-Route::get('/schedule-test', function () {
-  return view('schedule.index');
+Route::get('/schedule', function () {
+    return view('schedule.index');
 });
 
 //mail
