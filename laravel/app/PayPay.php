@@ -60,4 +60,17 @@ class PayPay extends Model
         $data = $response['data'];
         return json_encode($data);
     }
+
+    public static function checkPayment($merchant_payment_id)
+    {
+        $client = new Client([
+            'API_KEY' => config('paypay.key'),
+            'API_SECRET' => config('paypay.secret'),
+            'MERCHANT_ID' => config('paypay.merchant'),
+        ], false);
+
+        $response = $client->code->getPaymentDetails($merchant_payment_id);
+        $data = $response['data'];
+        return ($data['status'] === 'COMPLETED' ? true : false);
+    }
 }

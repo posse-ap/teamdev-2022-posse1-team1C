@@ -37,6 +37,7 @@ Route::get('/search', 'SearchController@index')->name('search');
 Route::post('/search', 'SearchController@result')->name('search_result');
 Route::get('/ticket', 'TicketController@index')->name('mentee.ticket');
 Route::post('/ticket/purchase', 'TicketController@purchase')->name('ticket.purchase');
+Route::post('/ticket/consume', 'TicketController@consume')->name('ticket.consume');
 
 Route::get('/schedule', function () {
     return view('schedule.index');

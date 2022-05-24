@@ -17,20 +17,15 @@
                     </div>
 
                     <div>
-                        @if (1 == 1)
-                            <p class="text-2xl mb-3 font-bold flex justify-center items-center">
-                                チケット残数</p>
-                        @else
-                            <p class="text-2xl mb-3 font-bold flex justify-center items-center">
-                                チケット消費</p>
-                        @endif
+                        <p class="text-2xl mb-3 font-bold flex justify-center items-center">
+                            チケット残数</p>
                         <div class="flex justify-center mb-6">
                             <p class="text-8xl mb-3 font-bold">
-                                0</p>
+                                {{ $ticket }}</p>
                             <p class="text-2xl mt-10 font-bold">
                                 枚</p>
                         </div>
-                        @if (1 == 1)
+                        @if ($ticket <= 0)
                             <p class="text-red-600 text-2xl text-center font-bold mb-4">
                                 チケットが不足しています<br>購入してください</p>
                         @else
@@ -42,9 +37,9 @@
 
                     <div>
                         <div class="flex justify-center items-center">
-                            @if (1 == 1)
+                            @if ($ticket <= 0)
                                 <form action="{{ route('ticket.purchase') }}" method="POST"
-                                    class="bg-[#13B1C0] text-white w-9/12 mt-2 rounded text-center">
+                                    class="bg-[#13B1C0] text-white w-9/12 mt-2 rounded text-center cursor-pointer">
                                     @csrf
                                     <input type="hidden" name="user_id" value=1>
                                     <button type="submit" class="font-bold h-10 text-2xl">
@@ -52,9 +47,15 @@
                                     </button>
                                 </form>
                             @else
-                                <button class="bg-[#13B1C0] text-white text-2xl font-bold w-9/12 h-10 mt-2 rounded">
-                                    <i class="text-white"></i> 消費する
-                                </button>
+                                <form action="{{ route('ticket.consume') }}" method="POST"
+                                    onsubmit="return confirm('チケットを消費しますか？')"
+                                    class="bg-[#13B1C0] text-white w-9/12 mt-2 rounded text-center cursor-pointer">
+                                    @csrf
+                                    <input type="hidden" name="user_id" value=1>
+                                    <button type="submit" class="font-bold h-10 text-2xl">
+                                        <i class="text-white"></i> 消費する
+                                    </button>
+                                </form>
                             @endif
                         </div>
                     </div>
