@@ -13,30 +13,23 @@ class UsersTableSeeder extends Seeder
     {
         $params = [
             [
-              [
+                'name' => 'メンティー',
+                'email' => 'testtesttest@com',
+                'password' => 'password',
+                'is_mentor' => '0',
+                'ticket' => '0'
+            ],
+            [
                 'name' => 'メンター',
                 'email' => 'testtest@com',
                 'password' => 'password',
                 'is_mentor' => '1',
                 'ticket' => '1'
-              ],
             ],
-          ];
+        ];
 
-        $params = [
-            [
-              [
-                'name' => 'メンティー',
-                'email' => 'testtesttest@com',
-                'password' => 'password',
-                'is_mentor' => '0',
-                'ticket' => '1'
-              ],
-            ],
-          ];
-          
-          foreach ($params as $param) {
+        foreach ($params as $param) {
             DB::table('users')->insert($param);
-          }
+        }
     }
 }
