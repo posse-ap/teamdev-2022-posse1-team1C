@@ -39,6 +39,9 @@ class TicketController extends Controller
     {
         $user_id = $request->user_id;
         $user = User::find($user_id);
+        if ($user->ticket <= 0) {
+            return back();
+        }
         $user->ticket--;
         $user->save();
         return view('schedule.index');
