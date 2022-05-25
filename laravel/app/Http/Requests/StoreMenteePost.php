@@ -1,0 +1,48 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class StoreMenteePost extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            "email" => "required|email:strict,dns,spoof|max:255",
+            "is_mentor" => "required|string|max:100",
+            "ticket" => "required|integer|max:0",
+            "password" => "required|string|regex:/\A([a-zA-Z0-9]{8,})+\z/u",
+            "password_confirmation" => "required|same:password",
+        ];
+    }
+
+    /**
+     * 定義済みバリデーションルールのエラーメッセージ取得
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'required'              => ':attribute は入力必須です。',
+            'password.regex'        => 'パスワードは英数字8文字以上です。',
+            'password_confirmation.same' => 'パスワードと確認用パスワードが一致しません。',
+        ];
+    }
+}
