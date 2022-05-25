@@ -51,3 +51,6 @@ Route::get('mail/mentee-request-confirm', 'Api\MailController@sendToMenteeReques
 Route::post('mail/mentee-request-confirm', 'Api\MailController@sendToMenteeRequestConfirmMail');
 Route::get('mail/both-the-day-before-remind', 'Api\MailController@sendToBothTheDayBeforeRemindMail');
 Route::post('mail/both-the-day-before-remind', 'Api\MailController@sendToBothTheDayBeforeRemindMail');
+
+Route::get('/privacy-policy', 'AgreementController@privacy_policy')->name('agreement.privacy_policy');
+Route::get('/terms-of-service', 'AgreementController@terms_of_service')->name('agreement.terms_of_service');
