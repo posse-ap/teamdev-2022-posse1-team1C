@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-  return view('welcome');
+    return view('welcome');
 });
 
 Route::get('/top', 'TopController@top')->name('top');
@@ -27,19 +27,21 @@ Route::get('/mentee/register-confirm', 'MenteeController@register_confirm')->nam
 Route::get('/mentee/profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
 Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
 Route::get('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register');
+Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
-Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
 
 //Call
 Route::get('/call', 'CallController@index')->name('call');
 
 Route::get('/search', 'SearchController@index')->name('search');
 Route::post('/search', 'SearchController@result')->name('search_result');
-Route::get('/search/result/ticket', 'TicketController@index')->name('mentee.ticket');
+Route::get('/ticket', 'TicketController@index')->name('mentee.ticket');
+Route::post('/ticket/purchase', 'TicketController@purchase')->name('ticket.purchase');
+Route::post('/ticket/consume', 'TicketController@consume')->name('ticket.consume');
 
-Route::get('/schedule-test', function () {
-  return view('schedule.index');
+Route::get('/schedule', function () {
+    return view('schedule.index');
 });
 
 //mail

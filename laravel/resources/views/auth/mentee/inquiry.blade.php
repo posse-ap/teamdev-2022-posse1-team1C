@@ -4,9 +4,9 @@
  
  
  @section('content') 
- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+ <div>
+    <div class="justify-content-center">
+        <div>
             <div class="flex justify-center items-center py-20 ml-20">
                     <div class="bg-white inline-block px-20 py-20 ml-20">
                         <i class="flex justify-center items-center fa-3x mb-6 fa-solid fa-circle-question"></i>
@@ -14,7 +14,7 @@
                         
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
-                            <div class="form-group row">
+                            <div>
                                 <div class="flex">
                                    <label for="name" class="text-md-right font-bold">{{ __('お名前') }}</label>
                                    <div class="border bg-red-500 text-white text-xs px-4 pt-1 rounded ml-2">必須</div>
@@ -31,13 +31,13 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
+                            <div>
                                 <div class="flex">
                                    <label for="email" class="text-md-right font-bold">{{ __('メールアドレス') }}</label>
                                    <div class="border bg-red-500 text-white text-xs px-4 pt-1 rounded ml-2">必須</div>
                                </div>
                        
-                                <div class="col-md-6">
+                                <div>
                                     <input id="email" type="email" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="info@menta.work">
                        
                                     @error('email')

@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 use PayPay\OpenPaymentAPI\Client;
 use PayPay\OpenPaymentAPI\Models\CreateQrCodePayload;
 use PayPay\OpenPaymentAPI\Models\OrderItem;
 
-class PaypayController extends Controller
+class PayPay extends Model
 {
-    public function index()
+    public static function createUrl($user_id)
     {
         $client = new Client([
             'API_KEY' => config('paypay.key'),
@@ -25,7 +25,8 @@ class PaypayController extends Controller
         $CQCPayload = new CreateQrCodePayload();
 
         // Set merchant pay identifier
-        $CQCPayload->setMerchantPaymentId("Mr_Kotani_please_help_me");
+        $today = new Carbon('now');
+        $CQCPayload->setMerchantPaymentId($user_id . '_' . $today);
 
         // Log time of request
         $CQCPayload->setRequestedAt();
@@ -35,20 +36,20 @@ class PaypayController extends Controller
         // Provide order details for invoicing
         $OrderItems = [];
         $OrderItems[] = (new OrderItem())
-            ->setName('Cake')
+            ->setName('チケット')
             ->setQuantity(1)
-            ->setUnitPrice(['amount' => 20, 'currency' => 'JPY']);
+            ->setUnitPrice(['amount' => 1200, 'currency' => 'JPY']);
         $CQCPayload->setOrderItems($OrderItems);
 
         // Save Cart totals
         $amount = [
-            "amount" => 1,
+            "amount" => 1200,
             "currency" => "JPY"
         ];
         $CQCPayload->setAmount($amount);
         // Configure redirects
         $CQCPayload->setRedirectType('WEB_LINK');
-        $CQCPayload->setRedirectUrl('https://paypay.ne.jp/');
+        $CQCPayload->setRedirectUrl(route('mentee.ticket'));
 
         $CQCPayload->setIsAuthorization(false);
         $CQCPayload->setUserAgent($_SERVER['HTTP_USER_AGENT']);
@@ -58,5 +59,18 @@ class PaypayController extends Controller
 
         $data = $response['data'];
         return json_encode($data);
+    }
+
+    public static function checkPayment($merchant_payment_id)
+    {
+        $client = new Client([
+            'API_KEY' => config('paypay.key'),
+            'API_SECRET' => config('paypay.secret'),
+            'MERCHANT_ID' => config('paypay.merchant'),
+        ], false);
+
+        $response = $client->code->getPaymentDetails($merchant_payment_id);
+        $data = $response['data'];
+        return ($data['status'] === 'COMPLETED' ? true : false);
     }
 }
