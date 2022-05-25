@@ -24,5 +24,8 @@ class MenteeController extends Controller
     public function inquiry()
     {
         return view('auth.mentee.inquiry');
+    public function request_list()
+    {
+        return view('schedule.request_list');
     }
 }
