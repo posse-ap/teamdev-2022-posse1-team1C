@@ -20,4 +20,9 @@ class MenteeController extends Controller
     {
         return view('edit.mentee.profile');
     }
+
+    public function request_list()
+    {
+        return view('schedule.request_list');
+    }
 }
