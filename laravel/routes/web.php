@@ -26,9 +26,9 @@ Route::get('/mentee/register', 'MenteeController@register')->name('mentee.regist
 Route::get('/mentee/register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
 Route::get('/mentee/profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
 Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.request_list');
+Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
 Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
 Route::get('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register');
-Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
 
