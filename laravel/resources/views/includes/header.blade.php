@@ -7,9 +7,9 @@
     </form>
     
     @if (Auth::check())
-     <form action="{{ route('logout') }}" method="POST">
+     <form class="w-24 my-auto mx-5" action="{{ route('logout') }}" method="POST">
         @csrf
-        <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-10 my-auto mx-5" type="submit">ログアウト</button>
+        <button class="bg-[#13B1C0] table w-full text-white mx-2 rounded-md shadow-md h-10" type="submit">ログアウト</button>
      </form>
     @else
         <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-10 my-auto mx-5" onclick="location.href='{{ route('login') }}'">ログイン</button>
