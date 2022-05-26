@@ -5,7 +5,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
         </button>
     </form>
-    <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-10 my-auto mx-5">ログイン</button>
+    <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-10 my-auto mx-5" onclick="location.href='{{ route('login') }}'">ログイン</button>
     <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-10 my-auto">無料登録</button>
 </div>
 <div class="h-20"></div>
