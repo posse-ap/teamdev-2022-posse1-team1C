@@ -13,12 +13,17 @@ use App\Mail\ToBothTheDayBeforeRemindMail;
 
 class MailController extends Controller
 {
-    public function sendToMentorScheduleAdjustmentRemindMail(Request $request)
+    public function sendToMentorScheduleAdjustmentRemindMail(
+        // Request $request
+        )
     {
-        $content = $request->input('content'); 
-        $user = auth()->user();
+        // contentにメールの文章の中に埋め込みたい値を入れる
+        // $content = $request->input('content'); 
+        // $user = auth()->user();
 	
-	Mail::to("testMentor@com")->send(new ToMentorScheduleAdjustmentRemindMail($content));
+	Mail::to("testMentor@com")->send(new ToMentorScheduleAdjustmentRemindMail(
+        // $content
+    ));
 
     // メール送信後の処理を以下に書く
     }
