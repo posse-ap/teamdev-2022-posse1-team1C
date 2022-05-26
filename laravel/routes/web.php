@@ -27,8 +27,9 @@ Auth::routes();
   Route::get('/mentee/register', 'MenteeController@register_show')->name('mentee.register_show');
   //確認
   Route::post('/mentee/register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
+  
   //送信完了
-  Route::post('/mentee/register-send', 'Mentee@Controller@register_send')->name('mentee.register_send');
+  Route::post('/mentee/register-send', 'MenteeController@register_send')->name('mentee.register_send');
   //編集
   Route::get('/mentee/profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
 
