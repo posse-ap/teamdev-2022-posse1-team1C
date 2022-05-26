@@ -15,7 +15,6 @@ class MenteeController extends Controller
 
     public function register_confirm(StoreMenteePost $request)
     {
-        $validated = $request->validated();
         $inputs = $request->all();
         return view('auth.mentee.register_confirm',compact("inputs"));
     }
@@ -33,7 +32,6 @@ class MenteeController extends Controller
             return redirect()
             ->route('mentee.register_show')
             ->withInput($inputs);
-            
         } else {
             //入力されたメールアドレスにメールを送信
             // \Mail::to($inputs['email'])->send(new ContactSendmail($inputs));
@@ -41,6 +39,8 @@ class MenteeController extends Controller
             //再送信を防ぐためにトークンを再発行
             $request->session()->regenerateToken();
             
+            
+
             //送信完了ページのviewを表示
             return view('auth.verify');
             

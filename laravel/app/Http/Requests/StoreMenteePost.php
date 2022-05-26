@@ -25,8 +25,6 @@ class StoreMenteePost extends FormRequest
     {
         return [
             "email" => "required|email:strict,dns,spoof|max:255",
-            "is_mentor" => "required|string|max:100",
-            "ticket" => "required|integer|max:0",
             "password" => "required|string|regex:/\A([a-zA-Z0-9]{8,})+\z/u",
             "password_confirmation" => "required|same:password",
         ];
