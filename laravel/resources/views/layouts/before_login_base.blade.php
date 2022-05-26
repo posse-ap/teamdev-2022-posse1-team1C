@@ -48,6 +48,31 @@
                 btnEye2.classList.remove("fa-eye");
             }
         }, false);
+
+        const form = document.getElementById("form");
+        const button = document.getElementById("button");
+
+        form.addEventListener("change", update);
+        
+        function update() {
+            let isRequired = form.checkValidity();
+
+            if (isRequired) {
+                button.classList.remove("opacity-50");
+                button.classList.add("opacity-100");
+                button.classList.toggle("pointer-events-none");
+                button.classList.remove("cursor-not-allowed");
+                button.classList.add("cursor-pointer");
+
+                return
+            } else {
+                button.classList.remove("opacity-100");
+                button.classList.add("opacity-50");
+                button.classList.toggle("pointer-events-none");
+                button.classList.remove("cursor-pointer");
+                button.classList.add("cursor-not-allowed");
+            }
+        }
     </script>
 </body>
 
