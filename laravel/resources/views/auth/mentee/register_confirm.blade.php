@@ -50,9 +50,6 @@
 
                                 <div class="mb-0 flex justify-center items-center">
                                     <div>
-                                        <input  type="hidden" id="is_mentor" name="is_mentor" required value="{{ $inputs["is_mentor"] }}">
-                                        <input  type="hidden" id="ticket" name="ticket" required value="{{ $inputs["ticket"] }}">
-
                                         <button type="submit" name="action" value="submit"
                                             class="bg-teal-400 text-white mb-10 mt-10 px-40 py-2 flex justify-center items-center rounded shadow-lg">
                                             {{ __('無料で会員登録する') }}</button>
