@@ -31,11 +31,9 @@ Route::get('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.sur
 Route::get('/mentee/cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
 Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
 Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.request_list');
-<<<<<<< HEAD
+
 Route::get('/mentor/register', 'MentorController@register')->name('mentor.register');
-=======
 Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
->>>>>>> 775aa3e22ecfe6f5e300c404996df55deac4ca32
 Route::get('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register');
 Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
 
@@ -45,8 +43,11 @@ Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
 //Call
 Route::get('/call', 'CallController@index')->name('call');
 
+// search
 Route::get('/search', 'SearchController@index')->name('search');
 Route::post('/search', 'SearchController@result')->name('search_result');
+
+// ticket
 Route::get('/ticket', 'TicketController@index')->name('mentee.ticket');
 Route::post('/ticket/purchase', 'TicketController@purchase')->name('ticket.purchase');
 Route::post('/ticket/consume', 'TicketController@consume')->name('ticket.consume');
