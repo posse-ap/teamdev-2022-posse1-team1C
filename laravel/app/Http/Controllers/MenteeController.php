@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Feedback;
+use App\User;
 use Illuminate\Http\Request;
 
 class MenteeController extends Controller
@@ -26,19 +28,24 @@ class MenteeController extends Controller
         return view('survey.question');
     }
 
-    public function survey_reason()
+    public function survey_reason(Request $request)
     {
-        return view('survey.reason');
+        $users = User::first()->users->is_mentor;
+        $feedbacks= new Feedback;
+        $feedbacks->content = $request->opinion;
+        $feedbacks->is_mentor = $request->is_mentor;
+        $feedbacks->save();
+        return view('survey.reason',compact('feedbacks','users'));
     }
 
     public function survey_cancel_reason()
     {
         return view('survey.cancel_reason');
+    }
 
     public function inquiry()
     {
         return view('auth.mentee.inquiry');
-
     }
     
     public function request_list()

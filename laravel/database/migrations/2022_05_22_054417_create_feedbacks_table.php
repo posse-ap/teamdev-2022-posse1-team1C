@@ -15,9 +15,9 @@ class CreateFeedbacksTable extends Migration
     {
         Schema::create('feedbacks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->boolean('is_mentor');
-            $table->unsignedBigInteger('schedule_adjustment_id');
-            $table->string('content');
+            $table->boolean('is_mentor')->nullable();
+            $table->unsignedBigInteger('schedule_adjustment_id')->nullable();
+            $table->string('content')->nullable();
             $table->timestamps();
         });
     }
