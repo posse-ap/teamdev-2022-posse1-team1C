@@ -2,14 +2,19 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 
-// TODO is_mentorカラムをusersテーブルに追加する
-const user_id = document.getElementById("chat")?.dataset.user_id;
-
-const threadId = 1;
-
-const userRole = user_id !== 3 ? "mentor" : "mentee";
-
 const Chat = () => {
+    const user_data = document.getElementById("chat").dataset;
+
+    const is_mentor = user_data.is_mentor;
+
+    const thread_id = user_data.thread_id;
+
+    const fixed_phrases = [
+        "ありがとうございます。",
+        "承知いたしました。",
+        "よろしくお願いいたします！",
+    ];
+
     // textareaの情報を管理する
     const textareaRef = useRef();
 
@@ -62,30 +67,8 @@ const Chat = () => {
             if (!textareaRef.current.value.match(/\S/g)) {
                 return;
             } else {
-                // 送信するメッセージをtextareaから取得
-                setMessages([
-                    ...messages,
-                    {
-                        sender: userRole,
-                        content: textareaRef.current.value,
-                    },
-                ]);
-
                 // メッセージをPOSTする
-                const post = async () => {
-                    try {
-                        await axios.post("/api/chat", {
-                            thread_id: threadId,
-                            sender: userRole,
-                            content: textareaRef.current.value,
-                        });
-                        // メッセージ送信時にチャットの最下端までスクロール
-                        scrollToBottomOfList();
-                    } catch (e) {
-                        console.error(e);
-                    }
-                };
-                post();
+                postMessage(textareaRef.current.value);
             }
 
             // textareaの中身を空にする
@@ -93,11 +76,36 @@ const Chat = () => {
         }
     };
 
+    // メッセージをPOSTする関数
+    const postMessage = async (content) => {
+        // 送信するメッセージをtextareaから取得
+        setMessages([
+            ...messages,
+            {
+                thread_id: thread_id,
+                is_mentor: is_mentor,
+                content: content,
+            },
+        ]);
+
+        try {
+            await axios.post("/api/chat", {
+                thread_id: thread_id,
+                is_mentor: is_mentor,
+                content: content,
+            });
+            // メッセージ送信時にチャットの最下端までスクロール
+            scrollToBottomOfList();
+        } catch (e) {
+            console.error(e);
+        }
+    };
+
     // メッセージがある時、送信者によって表示位置を左右に出し分ける
     let messageNodes = "";
     if (messages) {
         messageNodes = messages.map((message) => {
-            if (message.sender === userRole) {
+            if (message.is_mentor == is_mentor) {
                 return (
                     <li className="bg-[#13B1C0] text-white p-2 ml-auto rounded-md inline-block max-w-sm break-words">
                         {message.content}
@@ -116,17 +124,28 @@ const Chat = () => {
     return (
         <div className="h-full">
             <section className="h-3/5 overflow-scroll">
-                <ul className="flex flex-col gap-y-3 pt-5 px-5">
+                <ul className="flex flex-col gap-y-3 py-5 px-5">
                     {messageNodes}
                 </ul>
                 <div ref={ref}></div>
             </section>
             <section className="h-2/5">
-                <div className="h-16 bg-white"></div>
+                <ul className="h-16 bg-white flex gap-5 px-5 overflow-scroll">
+                    {fixed_phrases.map((fixed_phrase) => {
+                        return (
+                            <li
+                                className="shrink-0 my-auto bg-[#13B1C0] text-white p-2 rounded-md shadow-md cursor-pointer hover:opacity-80"
+                                onClick={() => postMessage(fixed_phrase)}
+                            >
+                                {fixed_phrase}
+                            </li>
+                        );
+                    })}
+                </ul>
                 <div className="h-[calc(100%-4rem)]">
                     <textarea
                         ref={textareaRef}
-                        className="h-full w-full outline-none resize-none bg-transparent border-2 focus:border-blue-200"
+                        className="h-full w-full outline-none resize-none bg-transparent border-2 focus:border-blue-200 px-5"
                         placeholder="テキストを入力"
                         onKeyDown={onEnterPress}
                     ></textarea>

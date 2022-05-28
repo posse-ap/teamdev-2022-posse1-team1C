@@ -14,7 +14,8 @@
         <button class="bg-[#13B1C0] text-white p-2 rounded-md shadow-md h-10 my-auto ml-auto">依頼一覧</button>
     </header>
     <div class="h-screen bg-[#F4F8FA] pt-16 pb-24">
-        <div id="chat" class="h-full" data-user_id={{ Auth::user()->id }}></div>
+        <div id="chat" class="h-full" data-thread_id={{ $thread_id }} data-is_mentor={{ $is_mentor }}>
+        </div>
     </div>
     <footer class="h-24 w-full fixed bottom-0 bg-white"></footer>
     <script src="{{ asset('js/app.js') }}"></script>
