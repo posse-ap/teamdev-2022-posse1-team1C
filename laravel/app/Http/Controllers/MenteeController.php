@@ -33,14 +33,13 @@ class MenteeController extends Controller
     public function survey_reason(Request $request)
     {
         $users = Auth::user();
-        $schedule_adjustment_id = ScheduleAdjustment::with('id');
         $is_mentor = $users->is_mentor;
         Feedback::insert([
-            'content' => $request['opinion'],
+            //todo contentカラムをnullableに設定した方がよい
+            'content' => '',
             'is_mentor' => $is_mentor,
             'schedule_adjustment_id' => 1,
         ]);
-       
         return view('survey.reason',compact('users'));
     }
 
