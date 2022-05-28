@@ -27,7 +27,7 @@
                                         <input id="email" type="email"
                                             class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded outline-none" @error('email') is-invalid @enderror
                                             name="email" value="{{ old('email') }}" required autocomplete="email"
-                                            placeholder="info@menta.work">
+                                            placeholder="Anovey@com">
 
                                         @error('email')
                                             <span class="text-red-500" role="alert">
