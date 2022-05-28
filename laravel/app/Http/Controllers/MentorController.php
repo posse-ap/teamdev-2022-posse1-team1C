@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class MentorController extends Controller
 {
+    public function register()
+    {
+        return view('auth.mentor.register');
+    }
     public function register_confirm()
     {
         return view('auth.mentor.register_confirm');

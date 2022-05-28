@@ -15,13 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/top', 'TopController@top')->name('top');
 
 
 Auth::routes();
 // Route::get('top/login', 'Auth\LoginController.php@index')->name('login');
 
 // Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/top', 'TopController@top')->name('top');
 
 Route::get('/mentee/register', 'MenteeController@register')->name('mentee.register');
 Route::get('/mentee/register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
@@ -31,8 +31,9 @@ Route::get('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.sur
 Route::get('/mentee/cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
 Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
 Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.request_list');
-Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
+Route::get('/mentor/register', 'MentorController@register')->name('mentor.register');
 Route::get('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register');
+Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
 

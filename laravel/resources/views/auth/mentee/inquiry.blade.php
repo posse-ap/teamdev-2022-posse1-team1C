@@ -7,8 +7,7 @@
             <div class="flex justify-center items-center py-20">
                     <div class="bg-white inline-block px-20 py-20">
                         <i class="flex justify-center items-center fa-3x mb-6 fa-solid fa-circle-question"></i>
-                        <p class="flex justify-center items-center font-bold mb-10">お問い合せフォーム</p>
-                        
+                        <p class="flex justify-center items-center font-bold mb-10">お問い合せフォーム</p> 
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
                             <div>
@@ -32,7 +31,6 @@
                                </div>
                                 <div>
                                     <input id="email" type="email" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="info@menta.work">
-                       
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -52,8 +50,8 @@
                             <button type="submit" class="bg-teal-400 text-white rounded shadow-lg px-20 mt-5 ml-20">送信</button>
                         </div>
                     </div> 
-               </div>
+                </div>
            </div>
        </div>
-   </div>
-    @endsection
+    </div>
+@endsection
