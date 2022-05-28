@@ -31,7 +31,11 @@ Route::get('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.sur
 Route::get('/mentee/cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
 Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
 Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.request_list');
+<<<<<<< HEAD
 Route::get('/mentor/register', 'MentorController@register')->name('mentor.register');
+=======
+Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
+>>>>>>> 775aa3e22ecfe6f5e300c404996df55deac4ca32
 Route::get('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register');
 Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
 
