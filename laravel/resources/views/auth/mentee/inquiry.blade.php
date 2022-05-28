@@ -1,14 +1,11 @@
 @extends('layouts.after_login_base')
-
-@section('title', 'アンケート')
- 
- 
-@section('content') 
-    <div>
-        <div class="justify-content-center">
-            <div>
-                <div class="flex justify-center items-center py-20 ml-20">
-                    <div class="bg-white inline-block px-20 py-20 ml-20">
+ @section('title', 'アンケート')
+ @section('content') 
+ <div>
+    <div class="justify-content-center">
+        <div>
+            <div class="flex justify-center items-center py-20">
+                    <div class="bg-white inline-block px-20 py-20">
                         <i class="flex justify-center items-center fa-3x mb-6 fa-solid fa-circle-question"></i>
                         <p class="flex justify-center items-center font-bold mb-10">お問い合せフォーム</p> 
                         <form method="POST" action="{{ route('register') }}">
@@ -17,11 +14,10 @@
                                 <div class="flex">
                                    <label for="name" class="text-md-right font-bold">{{ __('お名前') }}</label>
                                    <div class="border bg-red-500 text-white text-xs px-4 pt-1 rounded ml-2">必須</div>
-                               </div>         
+                               </div>
                                 <div>
                                     <input id="name" type="text" class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name">
-                       
-                                    @error('email')
+                                    @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
