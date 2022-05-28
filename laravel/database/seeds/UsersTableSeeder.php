@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class UsersTableSeeder extends Seeder
 {
@@ -15,14 +16,14 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'メンティー',
                 'email' => 'testtesttest@com',
-                'password' => 'password',
+                'password' => Hash::make('password'),
                 'is_mentor' => '0',
                 'ticket' => '0'
             ],
             [
                 'name' => 'メンター',
                 'email' => 'testtest@com',
-                'password' => 'password',
+                'password' => Hash::make('password'),
                 'is_mentor' => '1',
                 'ticket' => '1'
             ],
