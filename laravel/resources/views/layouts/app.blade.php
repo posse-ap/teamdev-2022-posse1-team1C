@@ -38,7 +38,7 @@
 <body>
 
     <header>
-        @include('includes.before_login_header')
+        @include('includes.header')
     </header>
 
     <div id="app">

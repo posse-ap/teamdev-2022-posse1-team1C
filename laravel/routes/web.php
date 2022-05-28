@@ -19,6 +19,7 @@ Route::get('/top', 'TopController@top')->name('top');
 
 
 Auth::routes();
+// Route::get('top/login', 'Auth\LoginController.php@index')->name('login');
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
