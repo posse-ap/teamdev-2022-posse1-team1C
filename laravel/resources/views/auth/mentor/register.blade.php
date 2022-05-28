@@ -1,6 +1,5 @@
 @extends('layouts.BeforeLoginBase')
 @section('title', 'メンターの登録')
-
  @section('content')
     <div class="justify-content-center">
         <div class="flex justify-center items-center py-20 ml-20">
