@@ -26,13 +26,4 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function MenteeRegister()
-    {
-        return view('auth.mentee_register');
-    }
-
-    public function MenterRegister()
-    {
-        return view('auth.menter_register');
-    }
 }

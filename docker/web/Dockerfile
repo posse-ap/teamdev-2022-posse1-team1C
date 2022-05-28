@@ -17,4 +17,7 @@ COPY --from=node /opt /opt
 # nginx config file
 COPY ./etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
+COPY ./etc/server.crt /etc/nginx/server.crt
+COPY ./etc/server.key /etc/nginx/server.key
+
 WORKDIR /work/backend
