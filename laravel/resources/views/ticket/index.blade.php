@@ -41,7 +41,6 @@
                                 <form action="{{ route('ticket.purchase') }}" method="POST"
                                     class="bg-[#13B1C0] text-white w-9/12 mt-2 rounded text-center cursor-pointer">
                                     @csrf
-                                    <input type="hidden" name="user_id" value=1>
                                     <button type="submit" class="font-bold h-10 text-2xl">
                                         <i class="text-white"></i> 購入する
                                     </button>
@@ -51,7 +50,6 @@
                                     onsubmit="return confirm('チケットを消費しますか？')"
                                     class="bg-[#13B1C0] text-white w-9/12 mt-2 rounded text-center cursor-pointer">
                                     @csrf
-                                    <input type="hidden" name="user_id" value=1>
                                     <button type="submit" class="font-bold h-10 text-2xl">
                                         <i class="text-white"></i> 消費する
                                     </button>
