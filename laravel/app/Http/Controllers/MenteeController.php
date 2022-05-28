@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Feedback;
 use App\User;
+use App\ScheduleAdjustment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MenteeController extends Controller
 {
@@ -30,12 +32,16 @@ class MenteeController extends Controller
 
     public function survey_reason(Request $request)
     {
-        $users = User::first()->users->is_mentor;
-        $feedbacks= new Feedback;
-        $feedbacks->content = $request->opinion;
-        $feedbacks->is_mentor = $request->is_mentor;
-        $feedbacks->save();
-        return view('survey.reason',compact('feedbacks','users'));
+        $users = Auth::user();
+        $schedule_adjustment_id = ScheduleAdjustment::with('id');
+        $is_mentor = $users->is_mentor;
+        Feedback::insert([
+            'content' => $request['opinion'],
+            'is_mentor' => $is_mentor,
+            'schedule_adjustment_id' => 1,
+        ]);
+       
+        return view('survey.reason',compact('users'));
     }
 
     public function survey_cancel_reason()
