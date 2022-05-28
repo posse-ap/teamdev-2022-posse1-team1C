@@ -50,7 +50,7 @@ class MenteeController extends Controller
             ]);
 
             //送信完了ページのviewを表示
-            return redirect('login');
+            return view('auth.login');
             
         }
     }
