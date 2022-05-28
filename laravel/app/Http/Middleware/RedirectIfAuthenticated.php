@@ -18,10 +18,9 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        
+
         if (Auth::guard($guard)->check()) {
             $user  =  Auth::user();
-            // dd($user);
             if ($user->is_mentor == 1) {
                 return redirect('top');
             } else {
