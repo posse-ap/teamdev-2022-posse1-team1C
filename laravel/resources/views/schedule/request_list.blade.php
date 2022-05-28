@@ -5,14 +5,14 @@
 @section('content')
     <div class="bg-[#F4F8FA]">
         <div class="justify-content-center ">
-            <div class="">
+            <div>
                 <div class="justify-center items-center py-20 px-20">
                     <div class="pb-5">
                         <p class="text-3xl font-bold flex pb-4">依頼一覧</p>
                     </div>
                     {{-- @foreach ($users as $user) --}}
                     <div class="mx-52 bg-white inline-block px-10 py-3">
-                        <div class="form-group row">
+                        <div>
                             <div class="flex justify-center items-center">
                                 <img class="mr-10" src="{{ asset('img/icon.png') }}" alt="アイコン">
                                 <p class="mr-10 text-2xl">匿名くコ:彡</p>
