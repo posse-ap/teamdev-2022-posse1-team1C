@@ -1,4 +1,4 @@
-@extends('layouts.BeforeLoginBase')
+@extends('layouts.before_login_base')
 @section('title', 'メンターの登録')
  @section('content')
     <div class="justify-content-center">
