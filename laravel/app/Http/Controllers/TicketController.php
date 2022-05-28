@@ -13,8 +13,7 @@ class TicketController extends Controller
     public function index()
     {
         $user_id = Auth::id();
-        Payment::convertToTicket($user_id);
-        $ticket = Auth::user()->ticket;
+        $ticket = Payment::convertToTicket($user_id);
         return view('ticket.index', compact('ticket'));
     }
 
