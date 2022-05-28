@@ -38,7 +38,7 @@
 <body>
 
     <header>
-        @include('includes.before_login_header')
+        @include('includes.header')
     </header>
 
     <div id="app">
@@ -51,21 +51,20 @@
         @include('includes.footer')
     </div>
 
-    <script>
-        var txtPass = document.getElementById("password");
-        var btnEye = document.getElementById("buttonEye");
-        btnEye.addEventListener('click', function() {
-            if (txtPass.type === "text") {
-                txtPass.type = "password";
-                btnEye.classList.add("fa-eye");
-                btnEye.classList.remove("fa-eye-slash");
-            } else {
-                txtPass.type = "text";
-                btnEye.classList.remove("fa-eye");
-                btnEye.classList.add("fa-eye-slash");
-            }
-        }, false);
-    </script>
+<script>
+      const txtPass = document.getElementById("password");
+      const btnEye = document.getElementById("buttonEye");
+      btnEye.addEventListener('click', function() {
+          if (txtPass.type === "text") {
+            txtPass.type = "password";
+            btnEye.className = "fa fa-eye";
+          } else {
+            txtPass.type = "text";
+            btnEye.className = "fa fa-eye-slash";
+          }
+      }, false);
+    
+  </script>
 </body>
 
 </html>
