@@ -22,13 +22,13 @@
                                 @csrf
                                 <div>
                                     <label for="email" class="font-bold">{{ __('メールアドレス') }}</label>
-
-                                    <div>
-                                        <input id="email" type="email"
-                                            class="bg-gray-100 mb-6 mt-2 w-full h-10 p-2 rounded outline-none" @error('email') is-invalid @enderror
-                                            name="email" value="{{ old('email') }}" required autocomplete="email"
-                                            placeholder="Anovey@com">
-
+                                    <div class="mb-6 mt-2">
+                                        <div>
+                                            <input id="email" type="email"
+                                                class="bg-gray-100 w-full h-10 p-2 rounded outline-none" @error('email') is-invalid @enderror
+                                                name="email" value="{{ old('email') }}" required autocomplete="email"
+                                                placeholder="Anovey@com">
+                                        </div>
                                         @error('email')
                                             <span class="text-red-500" role="alert">
                                                 <strong>{{ $message }}</strong>
