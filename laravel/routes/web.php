@@ -28,6 +28,7 @@ Route::get('/mentee/register-confirm', 'MenteeController@register_confirm')->nam
 Route::get('/mentee/profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
 Route::get('/mentee/question', 'MenteeController@survey_question')->name('mentee.survey.question');
 Route::get('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
+Route::post('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
 Route::get('/mentee/cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
 Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
 Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.request_list');
