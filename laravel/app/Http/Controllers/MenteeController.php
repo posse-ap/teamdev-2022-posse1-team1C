@@ -20,7 +20,7 @@ class MenteeController extends Controller
     {
         return view('edit.mentee.profile');
     }
-  
+
     public function survey_question()
     {
         return view('survey.question');
@@ -34,13 +34,13 @@ class MenteeController extends Controller
     public function survey_cancel_reason()
     {
         return view('survey.cancel_reason');
+    }
 
     public function inquiry()
     {
         return view('auth.mentee.inquiry');
-
     }
-    
+
     public function request_list()
     {
         return view('schedule.request_list');
