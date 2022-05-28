@@ -8,7 +8,7 @@
 
 <body>
     <header>
-        @include('includes.before_login_header')
+        @include('includes.header')
     </header>
 
     <main class="bg-gray-100">

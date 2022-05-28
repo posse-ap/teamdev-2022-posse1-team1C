@@ -1,6 +1,5 @@
 @extends('layouts.after_login_base')
 @section('title', 'メンティープロフィール編集')
-
 @section('content')
     <h1 class="font-bold text-3xl pt-10 flex justify-center items-center">基本情報</h1>
     <div>

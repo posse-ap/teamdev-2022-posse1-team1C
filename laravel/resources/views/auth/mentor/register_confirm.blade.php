@@ -1,4 +1,4 @@
-@extends('layouts.BeforeLoginBase')
+@extends('layouts.before_login_base')
 @section('title', 'メンターの登録確認画面')
 
  @section('content')
