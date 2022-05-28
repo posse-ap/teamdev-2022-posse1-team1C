@@ -15,13 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/top', 'TopController@top')->name('top');
 
 
 Auth::routes();
 // Route::get('top/login', 'Auth\LoginController.php@index')->name('login');
 
 // Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/top', 'TopController@top')->name('top');
+
 
 //メンティー
   //入力
@@ -32,13 +33,12 @@ Auth::routes();
   Route::post('/mentee/register-send', 'MenteeController@register_send')->name('mentee.register_send');
   //編集
   Route::get('/mentee/profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
-
   Route::get('/mentee/question', 'MenteeController@survey_question')->name('mentee.survey.question');
   Route::get('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
   Route::get('/mentee/cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
   Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
   Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.request_list');
-
+  
 //メンター
   //入力
   Route::get('/mentor/register', 'MentorController@register_show')->name('mentor.register_show');

@@ -1,9 +1,7 @@
 @extends('layouts.before_login_base')
 
 @section('title', 'メンティーの登録')
-
 @section('content')
-    <div>
         <div class="justify-content-center">
             <div>
                 <div class="flex justify-center items-center py-20">
@@ -97,10 +95,9 @@
                                             </a>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
     @endsection
