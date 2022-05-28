@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Mentor;
 
 class MenteeController extends Controller
 {
@@ -23,6 +25,8 @@ class MenteeController extends Controller
 
     public function request_list()
     {
+
+
         return view('schedule.request_list');
     }
 

@@ -14,4 +14,9 @@ class Thread extends Model
     {
         return $this->hasMany(Chat::class);
     }
+
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
