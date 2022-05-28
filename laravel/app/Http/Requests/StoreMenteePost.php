@@ -24,7 +24,7 @@ class StoreMenteePost extends FormRequest
     public function rules()
     {
         return [
-            "email" => "required|email:strict,dns,spoof|max:255",
+            "email" => "required|email:strict,dns,spoof|max:255|unique:users,email",
             "password" => "required|string|regex:/\A([a-zA-Z0-9]{8,})+\z/u",
             "password_confirmation" => "required|same:password",
         ];
@@ -41,6 +41,8 @@ class StoreMenteePost extends FormRequest
             'required'              => ':attribute は入力必須です。',
             'password.regex'        => 'パスワードは英数字8文字以上です。',
             'password_confirmation.same' => 'パスワードと確認用パスワードが一致しません。',
+            'email.unique' => 'このメールアドレスはすでに登録されています。',
+            'email.email' => 'メールアドレスの形式で入力してください。',
         ];
     }
 }
