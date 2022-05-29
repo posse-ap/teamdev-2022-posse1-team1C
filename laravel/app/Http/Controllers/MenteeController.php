@@ -48,7 +48,7 @@ class MenteeController extends Controller
                 'ticket' => 0,
             ]);
 
-            //送信完了ページのviewを表示
+            //登録後ログイン画面ページのviewを表示
             return view('auth.login');
             
         }

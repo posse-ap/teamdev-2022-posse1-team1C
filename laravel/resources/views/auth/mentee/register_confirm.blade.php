@@ -39,10 +39,8 @@
                                 <div>
                                     <div>
                                         <div class="flex justify-center items-center">
-                                            <label for="remember" class="ml-1">
                                                 <p><a href="" class="text-teal-400">利用規約</a>と<a href=""
                                                         class="text-teal-400">プライバシーポリシー</a>に同意します。</p>
-                                            </label>
                                         </div>
                                     </div>
                                 </div>

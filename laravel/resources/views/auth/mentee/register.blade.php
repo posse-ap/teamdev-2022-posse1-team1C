@@ -59,7 +59,7 @@
                                         <div class="flex bg-gray-100 rounded">
                                             <input id="password-confirm" type="password"
                                                 class="bg-gray-100 w-full h-10 p-2 rounded outline-none" name="password_confirmation"  @error('password_confirmation') is-invalid @enderror
-                                             autocomplete="new-password" placeholder="上と同じパスワードを入力してください">
+                                                autocomplete="new-password" placeholder="上と同じパスワードを入力してください">
                                             <span id="buttonEye2"
                                             class="fa fa-eye my-auto mr-3 cursor-pointer"></span>
                                         </div>
