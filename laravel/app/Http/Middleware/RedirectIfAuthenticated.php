@@ -22,7 +22,7 @@ class RedirectIfAuthenticated
         if (Auth::guard($guard)->check()) {
             $user  =  Auth::user();
             if ($user->is_mentor == 1) {
-                return redirect('top');
+                return redirect('/');
             } else {
                 return redirect('search');
             }
