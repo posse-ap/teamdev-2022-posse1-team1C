@@ -6,8 +6,9 @@
         <div class="flex justify-center items-center py-20">
             {{-- <div class="card-header">{{ __('Login') }}</div> --}}
             <div class="bg-white inline-block px-20 py-20 -mt-10">
-                <form method="POST" action="{{ route('register') }}">
+                <form method="POST" action="{{ route('mentee.profile_edit') }}">
                     @csrf
+                    <input type="hidden" name="id" value="{{$users->id}}">
                     <div>
                         <label for="email" class="font-bold">{{ __('メールアドレス') }}</label>
 

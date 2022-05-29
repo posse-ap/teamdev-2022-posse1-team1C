@@ -7,6 +7,7 @@ use App\User;
 use App\ScheduleAdjustment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class MenteeController extends Controller
 {
@@ -20,9 +21,13 @@ class MenteeController extends Controller
         return view('auth.mentee.register_confirm');
     }
 
-    public function edit_profile()
+    public function edit_profile(Request $request)
     {
-        return view('edit.mentee.profile');
+        $users = Auth::user();
+        $users->email = $request['email'];
+        $users->password = Hash::make($request['email']);
+        $users->save();
+        return view('edit.mentee.profile',compact('users'));
     }
   
     public function survey_question()
