@@ -16,6 +16,10 @@ class ThreadsTableSeeder extends Seeder
         'mentee_user_id' => 1,
         'mentor_user_id' => 2,
       ],
+      [
+        'mentee_user_id' => 1,
+        'mentor_user_id' => 3,
+      ],
     ];
 
     foreach ($params as $param) {

@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+
 use App\Http\Requests\StoreMenteePost;
 use App\User;
-use Illuminate\Support\Facades\Hash;
+use App\Mentor;
+use App\Thread;
 
 class MenteeController extends Controller
 {
@@ -64,6 +68,27 @@ class MenteeController extends Controller
         return view('survey.question');
     }
 
+    public function request_list()
+    {
+        // ユーザーIDを取得
+        $user_id = Auth::id();
+            // dd($user_id);
+
+        // メンターかどうか取得
+        $is_mentor = Auth::user()->is_mentor;
+        
+        // 自分に関係するスレッドのユーザー情報を取得
+        $connect_users = Auth::user()->threads_for_mentee()->with('getMentor.mentors')->get();
+            // dd($connect_users);
+        
+        return view('schedule.get_mentor', compact('connect_users'));
+    }
+
+    public function inquiry()
+    {
+        return view('auth.mentee.inquiry');
+    }
+
     public function survey_reason()
     {
         return view('survey.reason');
@@ -72,16 +97,5 @@ class MenteeController extends Controller
     public function survey_cancel_reason()
     {
         return view('survey.cancel_reason');
-    }
-
-    public function inquiry()
-    {
-        return view('auth.mentee.inquiry');
-
-    }
-    
-    public function request_list()
-    {
-        return view('schedule.request_list');
     }
 }

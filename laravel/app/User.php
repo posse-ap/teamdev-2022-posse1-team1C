@@ -39,6 +39,19 @@ class User extends Authenticatable
 
     public function mentors()
     {
-        return $this->hasMany(Mentor::class);
+        return $this->hasOne(Mentor::class);
+    }
+
+    public function threads()
+    {
+        return $this->hasMany(Thread::class);
+    }
+
+    public function threads_for_mentee() {
+        return $this->hasMany(Thread::class, 'mentee_user_id');
+    }
+
+    public function threads_for_mentor() {
+        return $this->hasMany(Thread::class, 'mentor_user_id');
     }
 }
