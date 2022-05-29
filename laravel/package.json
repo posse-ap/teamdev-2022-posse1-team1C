@@ -27,6 +27,7 @@
         "vue-loader": "^15.9.8"
     },
     "dependencies": {
+        "cors": "^2.8.5",
         "skyway-js": "^4.4.4"
     }
 }

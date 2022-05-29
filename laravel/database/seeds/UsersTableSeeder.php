@@ -14,14 +14,12 @@ class UsersTableSeeder extends Seeder
     {
         $params = [
             [
-                'name' => 'メンティー',
                 'email' => 'testtesttest@com',
                 'password' => Hash::make('password'),
                 'is_mentor' => '0',
                 'ticket' => '0'
             ],
             [
-                'name' => 'メンター',
                 'email' => 'testtest@com',
                 'password' => Hash::make('password'),
                 'is_mentor' => '1',

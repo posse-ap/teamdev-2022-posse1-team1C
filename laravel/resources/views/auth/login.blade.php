@@ -17,9 +17,9 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
-                            <div>
+                            <div class="mb-2">
                                 <label for="email"
-                                    class="font-bold flex justify-center items-center -ml-64 mr-5">{{ __('メールアドレス') }}</label>
+                                    class="font-bold h-10 ml-3">{{ __('メールアドレス') }}</label>
 
                                 <div class="flex justify-center items-center">
                                     <input id="email" type="email"
@@ -35,9 +35,9 @@
                                 </div>
                             </div>
 
-                            <div>
+                            <div class="mb-2">
                                 <label for="password"
-                                    class="flex justify-center h-10 -ml-32 mr-4 p-2 text-md-right font-semibold">{{ __('パスワード（英数字8文字以上）') }}</label>
+                                    class="font-bold h-10 ml-3">{{ __('パスワード（英数字8文字以上）') }}</label>
 
                                 <div class="flex justify-center items-center relative">
                                     <input id="password" type="password"
