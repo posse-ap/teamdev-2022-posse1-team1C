@@ -11,7 +11,7 @@
     <div class="my-auto ml-auto">
         @if (Auth::check())
             @if (Auth::user()->is_mentor == 1)
-                <ul class="menu ml-5 mr-5 mt-7">
+                <ul class="menu ml-5 mr-5">
                     <li>
                         <a href="#"><img class="" src="{{ asset('img/icon.png') }}" alt="アイコン"></a>
                         <ul class="w-full">

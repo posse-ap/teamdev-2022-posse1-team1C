@@ -4,7 +4,6 @@
     <h1 class="font-bold text-3xl pt-10 flex justify-center items-center">基本情報</h1>
     <div>
         <div class="flex justify-center items-center py-20">
-            {{-- <div class="card-header">{{ __('Login') }}</div> --}}
             <div class="bg-white inline-block px-20 py-20 -mt-10">
                 <form method="POST" action="{{ route('register') }}">
                     @csrf

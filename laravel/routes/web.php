@@ -11,19 +11,13 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 
 
 
 Auth::routes();
-// Route::get('top/login', 'Auth\LoginController.php@index')->name('login');
 
-// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'TopController@top')->name('top');
-
-
 
 Route::prefix('mentee')->group(function () {
     Route::get('register', 'MenteeController@register_show')->name('mentee.register');
