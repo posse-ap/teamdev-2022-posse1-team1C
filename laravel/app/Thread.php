@@ -14,4 +14,9 @@ class Thread extends Model
     {
         return $this->hasMany(Chat::class);
     }
+
+    public function schedule_adjustments()
+    {
+        return $this->hasMany(ScheduleAdjustment::class);
+    }
 }

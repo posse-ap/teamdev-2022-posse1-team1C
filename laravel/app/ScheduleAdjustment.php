@@ -27,4 +27,16 @@ class ScheduleAdjustment extends Model
     {
         return $this->hasMany(Schedule_status::class);
     }
+
+    public function getRequestStatus()
+    {
+        $schedule_status_id = $this->schedule_status_id;
+        if ($schedule_status_id === 1 || $schedule_status_id === 2) {
+            return '依頼中';
+        } else if ($schedule_status_id == 3) {
+            return '相談済み';
+        } else {
+            return '未依頼';
+        }
+    }
 }

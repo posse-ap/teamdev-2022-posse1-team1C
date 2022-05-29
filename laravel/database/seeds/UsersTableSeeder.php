@@ -27,6 +27,13 @@ class UsersTableSeeder extends Seeder
                 'is_mentor' => '1',
                 'ticket' => '1'
             ],
+            [
+                'name' => 'メンター',
+                'email' => 'test@com',
+                'password' => Hash::make('password'),
+                'is_mentor' => '1',
+                'ticket' => '1'
+            ],
         ];
 
         foreach ($params as $param) {
