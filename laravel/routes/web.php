@@ -24,36 +24,27 @@ Auth::routes();
 Route::get('/top', 'TopController@top')->name('top');
 
 
-//メンティー
-  //入力
-  Route::get('/mentee/register', 'MenteeController@register_show')->name('mentee.register_show');
-  //確認
-  Route::post('/mentee/register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
-  //送信完了
-  Route::post('/mentee/register-send', 'MenteeController@register_send')->name('mentee.register_send');
-  //編集
-  Route::get('/mentee/profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
-  Route::get('/mentee/question', 'MenteeController@survey_question')->name('mentee.survey.question');
-  Route::get('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
-  Route::get('/mentee/cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
-  Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
-  Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.request_list');
-  
-//メンター
-  //入力
-  Route::get('/mentor/register', 'MentorController@register_show')->name('mentor.register_show');
-  Route::post('/mentor/register', 'MentorController@register_company_search')->name('mentor.register_company_search');
+Route::prefix('mentee')->group(function () {
+    Route::get('register', 'MenteeController@register_show')->name('mentee.register_show');
+    Route::post('register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
+    Route::post('register-send', 'MenteeController@register_send')->name('mentee.register_send');
+    Route::get('profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
+    Route::post('/mentee/register-send', 'MenteeController@register_send')->name('mentee.register_send');
+    Route::get('question', 'MenteeController@survey_question')->name('mentee.survey.question');
+    Route::get('reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
+    Route::get('cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
+    Route::get('inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
+    Route::get('request-list', 'MenteeController@request_list')->name('mentee.request_list');
+    Route::get('chat/{thread_id}', 'ChatController@mentee_chat')->name('mentee.chat')->middleware('auth');
+});
 
-  //確認
-  Route::post('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register_confirm');
-  //送信完了
-  Route::post('/mentor/register-send', 'MentorController@register_send')->name('mentor.register_send');
-  //編集
-  Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
-
-
-//chat
-Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
+Route::prefix('mentor')->group(function () {
+    Route::get('register', 'MentorController@register_show')->name('mentor.register_show');
+    Route::post('register-confirm', 'MentorController@register_confirm')->name('mentor.register');
+    Route::post('register-send', 'MenteeController@register_send')->name('mentee.register_send');
+    Route::get('profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
+    Route::get('chat/{thread_id}', 'ChatController@mentor_chat')->name('mentor.chat')->middleware('auth');
+});
 
 //Call
 Route::get('/call', 'CallController@index')->name('call');
