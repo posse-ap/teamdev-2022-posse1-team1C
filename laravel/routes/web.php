@@ -36,7 +36,7 @@ Route::prefix('mentor')->group(function () {
     Route::get('register', 'MentorController@register_show')->name('mentor.register');
     Route::post('register', 'MentorController@register_company_search')->name('mentor.register_company_search');
     Route::post('register-confirm', 'MentorController@register_confirm')->name('mentor.register_confirm');
-    Route::post('register-send', 'MenteeController@register_send')->name('mentee.register_send');
+    Route::post('register-send', 'MenteeController@register_send')->name('mentor.register_send');
     Route::get('profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
     Route::get('request-list', 'MentorController@request_list')->name('mentor.request_list');
     Route::get('chat/{thread_id}', 'ChatController@mentor_chat')->name('mentor.chat')->middleware('auth');
