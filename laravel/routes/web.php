@@ -42,6 +42,8 @@ Route::get('/top', 'TopController@top')->name('top');
 //メンター
   //入力
   Route::get('/mentor/register', 'MentorController@register_show')->name('mentor.register_show');
+  Route::post('/mentor/register', 'MentorController@register_company_search')->name('mentor.register_company_search');
+
   //確認
   Route::post('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register_confirm');
   //送信完了

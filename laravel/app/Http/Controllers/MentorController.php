@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
 use App\Http\Requests\StoreMentorPost;
 use App\User;
 use App\Mentor;
@@ -14,6 +16,20 @@ class MentorController extends Controller
     public function register_show()
     {
         return view('auth.mentor.register');
+    }
+
+    public function register_company_search(Request $request)
+    {
+        $api_id = env('TAX_AGENCY_APPLICATION_ID');
+        $search_company_name = $request->search_company_name;
+        $url = 'https://api.houjin-bangou.nta.go.jp/4/name'.
+            '?id='. $api_id . // アプリケーションID
+            '&name='. $search_company_name . // URLエンコードした会社名（検索）
+            '&type=12'; // Unicode
+        $client = new Client();
+        $response = $client->request('GET', $url);
+        $api_data = simplexml_load_string($response->getBody()->getContents());
+        return view('auth.mentor.register', compact('request', 'api_data'));
     }
 
     public function register_confirm(StoreMentorPost $request)

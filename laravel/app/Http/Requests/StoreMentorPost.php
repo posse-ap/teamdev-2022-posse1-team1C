@@ -46,6 +46,7 @@ class StoreMentorPost extends FormRequest
             'password_confirmation.same' => 'パスワードと確認用パスワードが一致しません。',
             'email.unique' => 'このメールアドレスはすでに登録されています。',
             'paypay_link.url' => 'URLの形式で入力してください。',
+            'company_name.required' => '検索してください。',
         ];
     }
 }
