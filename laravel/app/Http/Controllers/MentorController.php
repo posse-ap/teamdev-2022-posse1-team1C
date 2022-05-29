@@ -94,4 +94,8 @@ class MentorController extends Controller
 
         return view('schedule.get_mentee', compact('connect_users'));
     }
+
+    public function edit_profile(){
+        return view('edit.mentor.profile');
+    }
 }
