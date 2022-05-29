@@ -94,7 +94,7 @@
                             </div>
                         </div>
                     </form>
-                    <a href="{{ route('mentee.register_show') }}" name="action" value="back"
+                    <a href="{{ route('mentor.register_show') }}" name="action" value="back"
                         class="text-xl font-bold flex justify-center items-center text-teal-400 mt-10 underline">戻る
                     </a>
                 </div>
