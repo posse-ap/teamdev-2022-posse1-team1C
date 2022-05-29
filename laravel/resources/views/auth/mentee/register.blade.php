@@ -5,17 +5,12 @@
         <div class="justify-content-center">
             <div>
                 <div class="flex justify-center items-center py-20">
-                    {{-- <div class="card-header">{{ __('Login') }}</div> --}}
-
                     <div class="bg-white inline-block px-20 py-20">
-
                         <div class="pb-5">
                             <p class="text-3xl font-bold flex justify-center items-center pb-4 text-teal-400">新規会員登録</p>
                             <div class="border-b-2 px-64"></div>
                         </div>
-
                         <div>
-
                             <form method="POST" action="{{ route('mentee.register_confirm') }}" id="form">
                                 @csrf
                                 <div>
@@ -34,7 +29,6 @@
                                         @enderror
                                     </div>
                                 </div>
-
                                 <div>
                                     <label for="password" class="font-bold">{{ __('パスワード（英数字8文字以上）') }}</label>
                                     <div class="mb-6 mt-2 relative">
@@ -52,7 +46,6 @@
                                         @enderror
                                     </div>
                                 </div>
-
                                 <div>
                                     <label for="password-confirm" class="font-bold flex justify-center items-center -ml-48 mr-48">{{ __('確認用パスワード') }}</label>
                                     <div class="mb-6 mt-2 relative">
@@ -70,7 +63,6 @@
                                         @enderror
                                     </div>
                                 </div>
-
                                 <div>
                                     <div>
                                         <div class="flex justify-center items-center">
@@ -82,7 +74,6 @@
                                         </div>
                                     </div>
                                 </div>
-
 
                                 <div class="mb-0 flex justify-center items-center">
                                     <div>

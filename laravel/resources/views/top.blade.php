@@ -11,6 +11,8 @@
         </a>
     </div>
 
+    <img  class="h-auto" src="{{ asset('img/top.png') }}" alt="">
+    
 
     <div class="bg-slate-100 flex justify-center">
         <div>
@@ -48,8 +50,6 @@
         <div class="flex justify-center">
             <h2 class="font-bold text-3xl mt-14">Anoveyでできること</h2>
         </div>
-
-        {{-- <div class="border-solid border border-gray-100 mt-56 w-4/12 container mx-auto"></div> --}}
 
         <div class="flex justify-center">
             <div class="mr-10 text-gray-700">
