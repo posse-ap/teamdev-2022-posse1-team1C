@@ -19,11 +19,8 @@ Auth::routes();
 
 Route::get('/', 'TopController@top')->name('top');
 
-<<<<<<< HEAD
-=======
 Route::get('/admin{any}', 'AdminController@index')->where('any', '.*')->name('admin.index');
 
->>>>>>> 26f762d5eee85e1b266518c8958da0f5840a0e4a
 Route::prefix('mentee')->group(function () {
     Route::get('register', 'MenteeController@register_show')->name('mentee.register');
     Route::post('register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
