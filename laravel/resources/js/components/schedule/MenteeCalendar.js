@@ -18,7 +18,7 @@ for (let minute = 0; minute <= 50; minute += 10) {
     minutes.push(("00" + minute).slice(-2));
 }
 
-function MenteeCalendar() {
+function MenteeCalendar(props) {
     // アコーディオンを開いた時間リスト
     const [checkedHours, setCheckedHours] = useState([]);
     // 候補日程リスト
@@ -101,9 +101,24 @@ function MenteeCalendar() {
         setPossibleDates(checkedCells);
     };
 
+    const submitCalendar = () => {
+        const this_year = new Date().getFullYear();
+        let new_dates = [];
+        possibleDates.forEach((possibleDate, i) => {
+            let dates = possibleDate.split("_");
+            let month = ("00" + dates[0].split("/")[0]).slice(-2);
+            let day = ("00" + dates[0].split("/")[1]).slice(-2);
+            let hour = ("00" + dates[1]).slice(-2);
+            let minute = ("00" + dates[2]).slice(-2);
+            new_dates[i] = `${this_year}-${month}-${day} ${hour}:${minute}`;
+        });
+        alert(new_dates);
+        props.setSentCalendar(true);
+    };
+
     return (
         <div className="p-10">
-            <p className="font-bold text-2xl text-center my-10">
+            <p className="font-bold text-2xl text-center my-10 bg-white table mx-auto p-5 rounded-md">
                 空いている日程を
                 <br />
                 選択して送信しましょう
@@ -212,6 +227,14 @@ function MenteeCalendar() {
                     );
                 })}
             </section>
+            <div>
+                <button
+                    className="bg-[#13B1C0] text-white text-3xl font-bold py-3 px-16 mx-auto mt-5 rounded-md relative left-1/2 -translate-x-1/2"
+                    onClick={submitCalendar}
+                >
+                    送信する
+                </button>
+            </div>
         </div>
     );
 }

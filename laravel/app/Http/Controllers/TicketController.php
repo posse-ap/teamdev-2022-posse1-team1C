@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Chat;
 use App\Payment;
 use App\PayPay;
 use App\Thread;
