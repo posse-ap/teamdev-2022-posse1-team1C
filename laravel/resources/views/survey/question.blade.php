@@ -3,9 +3,9 @@
  @section('title', 'アンケート')
 
  @section('content') 
- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+ <div>
+    <div class="justify-content-center">
+        <div>
             <div class="flex justify-center items-center py-20 ml-20">
                     <div class="bg-white inline-block px-20 py-20 ml-20">
                         <i class="flex justify-center items-center fa-solid fa-calendar-check fa-3x mb-6"></i>
