@@ -51,7 +51,7 @@ class MentorController extends Controller
         //actionの値で分岐
         if($action !== 'submit'){
             return redirect()
-            ->route('mentor.register_show')
+            ->route('mentor.register')
             ->withInput($inputs);
         } else {
             //入力されたメールアドレスにメールを送信

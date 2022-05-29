@@ -76,7 +76,7 @@
                                         <div class="flex justify-center items-center">
                                             <input type="checkbox" name="" id="agree" class="mr-3 h-25 w-25" >
                                             <label for="remember">
-                                                <p><a href="" class="text-teal-400">利用規約</a>と<a href=""
+                                                <p><a href="{{ route('agreement.privacy_policy') }}" class="text-teal-400">利用規約</a>と<a href="{{ route('agreement.privacy_policy') }}"
                                                         class="text-teal-400">プライバシーポリシー</a>に同意します。</p>
                                             </label>
                                         </div>

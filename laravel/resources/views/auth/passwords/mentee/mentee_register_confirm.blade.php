@@ -39,7 +39,7 @@
                                     <div class="form-check flex justify-center items-center">
                                         <input class="form-check-input" type="checkbox" name="" id="">
                                             <label class="form-check-label" for="remember">
-                                               <p><a href="" class="text-teal-400">利用規約</a>と<a href="" class="text-teal-400">プライバシーポリシー</a>に同意します。</p>
+                                               <p><a href="{{ route('agreement.privacy_policy') }}" class="text-teal-400">利用規約</a>と<a href="{{ route('agreement.privacy_policy') }}" class="text-teal-400">プライバシーポリシー</a>に同意します。</p>
                                             </label>
                                     </div>
                                 </div>
