@@ -35,7 +35,7 @@ class MenteeController extends Controller
         //actionの値で分岐
         if($action !== 'submit'){
             return redirect()
-            ->route('mentee.register_show')
+            ->route('mentee.register')
             ->withInput($inputs);
         } else {
             //入力されたメールアドレスにメールを送信

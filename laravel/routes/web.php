@@ -26,11 +26,11 @@ Route::get('/', 'TopController@top')->name('top');
 
 
 Route::prefix('mentee')->group(function () {
-    Route::get('register', 'MenteeController@register_show')->name('mentee.register_show');
+    Route::get('register', 'MenteeController@register_show')->name('mentee.register');
     Route::post('register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
     Route::post('register-send', 'MenteeController@register_send')->name('mentee.register_send');
     Route::get('profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
-    Route::post('/mentee/register-send', 'MenteeController@register_send')->name('mentee.register_send');
+    Route::post('register-send', 'MenteeController@register_send')->name('mentee.register_send');
     Route::get('question', 'MenteeController@survey_question')->name('mentee.survey.question');
     Route::get('reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
     Route::get('cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
@@ -39,7 +39,7 @@ Route::prefix('mentee')->group(function () {
 });
 
 Route::prefix('mentor')->group(function () {
-    Route::get('register', 'MentorController@register_show')->name('mentor.register_show');
+    Route::get('register', 'MentorController@register_show')->name('mentor.register');
     Route::post('register-confirm', 'MentorController@register_confirm')->name('mentor.register');
     Route::post('register-send', 'MenteeController@register_send')->name('mentee.register_send');
     Route::get('profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');

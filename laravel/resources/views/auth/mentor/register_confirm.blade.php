@@ -75,7 +75,7 @@
                             <div>
                                 <div class="flex justify-center items-center">
                                     <label for="remember">
-                                        <p><a href="" class="text-teal-400">利用規約</a>と<a href=""
+                                        <p><a href="{{ route('agreement.privacy_policy') }}" class="text-teal-400">利用規約</a>と<a href="{{ route('agreement.privacy_policy') }}"
                                                 class="text-teal-400">プライバシーポリシー</a>に同意します。</p>
                                     </label>
                                 </div>
@@ -94,7 +94,7 @@
                             </div>
                         </div>
                     </form>
-                    <a href="{{ route('mentor.register_show') }}" name="action" value="back"
+                    <a href="{{ route('mentor.register') }}" name="action" value="back"
                         class="text-xl font-bold flex justify-center items-center text-teal-400 mt-10 underline">戻る
                     </a>
                 </div>
