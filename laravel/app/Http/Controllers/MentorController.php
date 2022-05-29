@@ -33,8 +33,8 @@ class MentorController extends Controller
         // メンターかどうか取得
         $is_mentor = Auth::user()->is_mentor;
         $connect_users = Auth::user()->threads_for_mentor()->with('getMentee')->get();
-                // dd($threads);
-        
+            // dd($threads);
+
         return view('schedule.get_mentee', compact('connect_users'));
     }
 }
