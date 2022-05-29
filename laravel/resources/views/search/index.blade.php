@@ -66,9 +66,17 @@
                                                     {{ $mentor->getSchedule(Auth::id())['schedule_status'] }}</p>
                                                 <p class="mr-10 text-xl">
                                                     {{ $mentor->getSchedule(Auth::id())['fixed_schedule'] }}</p>
-                                                <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-2/3"><i
-                                                        class="fa-solid fa-comment-dots"
-                                                        onclick="location.href='{{ route('mentee.ticket') }}' ">チャット</i></button>
+                                                @if ($mentor->getSchedule(Auth::id())['thread_id'])
+                                                    <button
+                                                        class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-2/3"><i
+                                                            class="fa-solid fa-comment-dots"
+                                                            onclick="location.href='{{ route('mentee.chat', ['thread_id' => $mentor->getSchedule(Auth::id())['thread_id']]) }}' ">チャット</i></button>
+                                                @else
+                                                    <button
+                                                        class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-2/3"><i
+                                                            class="fa-solid fa-comment-dots"
+                                                            onclick="location.href='{{ route('mentee.ticket', ['mentor_user_id' => $mentor->id]) }}' ">チャット</i></button>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

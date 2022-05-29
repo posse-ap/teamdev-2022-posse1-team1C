@@ -28,6 +28,13 @@ class Mentor extends Model
             ->where('mentee_user_id', $mentee_user_id)
             ->with('schedule_adjustments')
             ->first();
+        if (!isset($threads)) {
+            return [
+                'thread_id' => null,
+                'schedule_status' => '未依頼',
+                'fixed_schedule' => '-',
+            ];
+        }
         $schedule_adjustment = $threads
             ->schedule_adjustments
             ->sortByDesc('id')
@@ -46,6 +53,7 @@ class Mentor extends Model
             $fixed_schedule = $schedule_adjustment->fixed_schedule;
         }
         return [
+            'thread_id' => $threads->id,
             'schedule_status' => $schedule_status,
             'fixed_schedule' => $fixed_schedule,
         ];
