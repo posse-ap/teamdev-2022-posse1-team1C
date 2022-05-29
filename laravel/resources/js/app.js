@@ -16,3 +16,4 @@ require("./components/Example");
 require("./components/Chat");
 require("./components/Call");
 require("./components/schedule/MenteeCalendar");
+require("./components/admin/AdminWrapper");
