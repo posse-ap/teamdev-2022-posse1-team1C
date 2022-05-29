@@ -3,11 +3,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// クラスのカスタマイズ
+.checkedCellColor {
+  @apply bg-blue-200;
+}
+.admin_location {
+  @apply rounded-l-full rounded-r-full bg-[#E3F0F2] text-[#01B0BF];
+}

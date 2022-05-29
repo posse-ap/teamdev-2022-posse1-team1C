@@ -10,7 +10,7 @@
     "devDependencies": {
         "@babel/preset-react": "^7.0.0",
         "autoprefixer": "^10.4.4",
-        "axios": "^0.19",
+        "axios": "^0.27.2",
         "bootstrap": "^4.0.0",
         "cross-env": "^7.0",
         "jquery": "^3.2",
@@ -20,10 +20,18 @@
         "postcss": "^8.4.12",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
-        "resolve-url-loader": "^2.3.1",
+        "resolve-url-loader": "^5.0.0",
         "sass": "^1.20.1",
         "sass-loader": "^8.0.0",
         "tailwindcss": "^3.0.24",
         "vue-loader": "^15.9.8"
+    },
+    "dependencies": {
+        "chart.js": "^3.7.1",
+        "chartjs-plugin-datalabels": "^2.0.0",
+        "react-chartjs-2": "^4.1.0",
+        "react-router-dom": "^6.3.0",
+        "cors": "^2.8.5",
+        "skyway-js": "^4.4.4"
     }
 }
