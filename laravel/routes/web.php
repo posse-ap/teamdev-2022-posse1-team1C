@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 
@@ -21,7 +21,8 @@ Auth::routes();
 // Route::get('top/login', 'Auth\LoginController.php@index')->name('login');
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/top', 'TopController@top')->name('top');
+Route::get('/', 'TopController@top')->name('top');
+
 
 Route::prefix('mentee')->group(function () {
     Route::get('register', 'MenteeController@register')->name('mentee.register');
@@ -39,14 +40,18 @@ Route::prefix('mentor')->group(function () {
     Route::get('register', 'MentorController@register')->name('mentor.register');
     Route::get('register-confirm', 'MentorController@register_confirm')->name('mentor.register');
     Route::get('profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
+    Route::get('request-list', 'MentorController@request_list')->name('mentor.request_list');
     Route::get('chat/{thread_id}', 'ChatController@mentor_chat')->name('mentor.chat')->middleware('auth');
 });
 
 //Call
 Route::get('/call', 'CallController@index')->name('call');
 
+// search
 Route::get('/search', 'SearchController@index')->name('search');
 Route::post('/search', 'SearchController@result')->name('search_result');
+
+// ticket
 Route::get('/ticket', 'TicketController@index')->name('mentee.ticket');
 Route::post('/ticket/purchase', 'TicketController@purchase')->name('ticket.purchase');
 Route::post('/ticket/consume', 'TicketController@consume')->name('ticket.consume');
