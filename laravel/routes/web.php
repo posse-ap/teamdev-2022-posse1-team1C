@@ -27,6 +27,7 @@ Route::get('/', 'TopController@top')->name('top');
 
 Route::prefix('mentee')->group(function () {
     Route::get('register', 'MenteeController@register_show')->name('mentee.register_show');
+    Route::get('register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
     Route::post('register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
     Route::post('register-send', 'MenteeController@register_send')->name('mentee.register_send');
     Route::get('profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
