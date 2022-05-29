@@ -1,8 +1,11 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
+import MenteeCalendar from "./schedule/MenteeCalendar";
 
 const Chat = () => {
+    const [sentCalendar, setSentCalendar] = useState(false);
+
     const user_data = document.getElementById("chat").dataset;
 
     const is_mentor = Number(user_data.is_mentor);
@@ -126,6 +129,25 @@ const Chat = () => {
 
     return (
         <div className="h-full">
+            {sentCalendar ? (
+                <>
+                    <section className="w-full h-screen fixed top-0 left-0 overflow-scroll z-10 hidden">
+                        <div className="w-1/2 mx-auto">
+                            <MenteeCalendar setSentCalendar={setSentCalendar} />
+                        </div>
+                    </section>
+                    <div className="bg-black opacity-20 w-full h-screen fixed top-0 left-0 z-5 hidden"></div>
+                </>
+            ) : (
+                <>
+                    <section className="w-full h-screen fixed top-0 left-0 overflow-scroll z-10">
+                        <div className="w-1/2 mx-auto">
+                            <MenteeCalendar setSentCalendar={setSentCalendar} />
+                        </div>
+                    </section>
+                    <div className="bg-black opacity-20 w-full h-screen fixed top-0 left-0 z-5"></div>
+                </>
+            )}
             <section className="h-2/3 overflow-scroll">
                 <ul className="flex flex-col gap-y-3 py-5 px-10 whitespace-pre-line">
                     {messageNodes}
@@ -166,6 +188,20 @@ const Chat = () => {
                     ></textarea>
                 </div>
             </section>
+
+            {sentCalendar ? (
+                <div className="h-24 bg-white fixed bottom-0 w-full">
+                    <a className="bg-[#13B1C0] py-3 px-16 rounded-md shadow-md hover:opacity-80 text-white font-bold text-3xl mx-auto table relative top-1/2 -translate-y-1/2 cursor-pointer">
+                        通話を開始する
+                    </a>
+                </div>
+            ) : (
+                <div className="h-24 bg-white fixed bottom-0 w-full -z-10">
+                    <a className="bg-[#13B1C0] py-3 px-16 rounded-md shadow-md hover:opacity-80 text-white font-bold text-3xl mx-auto table relative top-1/2 -translate-y-1/2 cursor-pointer">
+                        通話を開始する
+                    </a>
+                </div>
+            )}
         </div>
     );
 };

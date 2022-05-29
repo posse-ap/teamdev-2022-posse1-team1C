@@ -11,6 +11,20 @@ class ScheduleStatusesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $params = [
+            [
+                'name' => 'waiting_for_mentor_reply',
+            ],
+            [
+                'name' => 'schedule_fixed',
+            ],
+            [
+                'name' => 'calling_completed',
+            ],
+        ];
+
+        foreach ($params as $param) {
+            DB::table('schedule_statuses')->insert($param);
+        }
     }
 }

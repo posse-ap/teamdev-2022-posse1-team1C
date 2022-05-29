@@ -19,12 +19,6 @@
         <div id="chat" class="h-full" data-thread_id={{ $thread_id }} data-is_mentor={{ $is_mentor }}>
         </div>
     </div>
-    <div class="h-24 bg-white fixed bottom-0 w-full">
-        <a
-            class="bg-[#13B1C0] py-3 px-16 rounded-md shadow-md hover:opacity-80 text-white font-bold text-3xl mx-auto table relative top-1/2 -translate-y-1/2 cursor-pointer">
-            通話を開始する
-        </a>
-    </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

@@ -10,7 +10,7 @@ use PayPay\OpenPaymentAPI\Models\OrderItem;
 
 class PayPay extends Model
 {
-    public static function createUrl($user_id)
+    public static function createUrl($user_id, $mentor_user_id)
     {
         $client = new Client([
             'API_KEY' => config('paypay.key'),
@@ -49,7 +49,7 @@ class PayPay extends Model
         $CQCPayload->setAmount($amount);
         // Configure redirects
         $CQCPayload->setRedirectType('WEB_LINK');
-        $CQCPayload->setRedirectUrl(route('mentee.ticket'));
+        $CQCPayload->setRedirectUrl(route('mentee.ticket', $mentor_user_id));
 
         $CQCPayload->setIsAuthorization(false);
         $CQCPayload->setUserAgent($_SERVER['HTTP_USER_AGENT']);
