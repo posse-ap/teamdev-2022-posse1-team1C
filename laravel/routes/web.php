@@ -31,7 +31,6 @@ Route::prefix('mentee')->group(function () {
     Route::get('question', 'MenteeController@survey_question')->name('mentee.survey.question');
     Route::get('reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
     Route::get('cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
-    Route::get('inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
     Route::get('request-list', 'MenteeController@request_list')->name('mentee.request_list');
     Route::get('chat/{thread_id}', 'ChatController@mentee_chat')->name('mentee.chat')->middleware('auth');
 });
@@ -55,6 +54,9 @@ Route::post('/search', 'SearchController@result')->name('search_result');
 Route::get('/ticket', 'TicketController@index')->name('mentee.ticket');
 Route::post('/ticket/purchase', 'TicketController@purchase')->name('ticket.purchase');
 Route::post('/ticket/consume', 'TicketController@consume')->name('ticket.consume');
+
+// inquiry
+Route::get('inquiry', 'MenteeController@inquiry')->name('inquiry');
 
 Route::get('/schedule', function () {
     return view('schedule.index');
