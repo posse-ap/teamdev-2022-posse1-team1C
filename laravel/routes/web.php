@@ -54,11 +54,9 @@ Route::get('/call', 'CallController@index')->name('call');
 // search
 Route::get('/search', 'SearchController@index')->name('search');
 Route::post('/search', 'SearchController@result')->name('search_result');
-
-// ticket
-Route::get('/ticket', 'TicketController@index')->name('mentee.ticket');
-Route::post('/ticket/purchase', 'TicketController@purchase')->name('ticket.purchase');
-Route::post('/ticket/consume', 'TicketController@consume')->name('ticket.consume');
+Route::get('/ticket/{mentor_user_id}', 'TicketController@index')->name('mentee.ticket');
+Route::post('/ticket/purchase/{mentor_user_id}', 'TicketController@purchase')->name('ticket.purchase');
+Route::post('/ticket/consume/{mentor_user_id}', 'TicketController@consume')->name('ticket.consume');
 
 // inquiry
 Route::get('inquiry', 'MenteeController@inquiry')->name('inquiry');

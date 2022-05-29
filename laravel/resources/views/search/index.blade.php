@@ -3,22 +3,10 @@
 @section('title', 'メンター検索画面')
 
 @section('content')
-    {{-- <div class="w-8/12 h-2/4 flex justify-center items-center">
-        <form action="" enctype="multipart/form-data" method="POST">
-            @csrf
-            <h2>メンターを探す</h2>
-            <p>社名</p>
-            <input type="text" name="name" placeholder="社名を入力してください" value="">
-            <p>部署名</p>
-            <input type="text" name="department" placeholder="部署名を入力してください" value="">
-            <input type="submit" value="検索する">
-        </form>
-    </div> --}}
     <div>
         <div>
             <div>
                 <div class="flex justify-center items-center py-20 mx-auto w-1/2">
-                    {{-- <div class="card-header">{{ __('Login') }}</div> --}}
 
                     <div class="inline-block w-full">
 
@@ -49,20 +37,9 @@
                                     <div class="flex justify-center items-center">
                                         <input id="" type="text"
                                             class="bg-white outline outline-gray-400 mb-6 mt-2 w-full h-10 p-2"
-                                            name="depertment" value="" placeholder="部署名を入力してください">
+                                            name="department" value="" placeholder="部署名を入力してください">
                                     </div>
                                 </div>
-
-                                {{-- <div class="form-group row">
-                                <label for="password"
-                                    class="flex items-centercol-md-4 h-10 text-gray-300 mr-4 col-form-label text-md-right font-semibold">{{ __('部署名') }}</label>
-
-                                <div class="col-md-6 flex justify-center items-center">
-                                    <input id="" type="text"
-                                        class="bg-white mb-6 mt-2 outline-gray-400 w-full h-10 p-2 form-control" name="password"
-                                        required autocomplete="current-password" placeholder="部署名を入力してください">
-                                </div>
-                            </div> --}}
                                 <div class="bg-white">
                                     <div class="flex justify-center items-center">
                                         <button
@@ -74,27 +51,37 @@
                             </form>
                         </section>
 
-                        @if (isset($users))
-                            
-                        <section class="px-5 w-full">
-                            @foreach ($users as $user)
-                                {{-- <div class="bg-white inline-block px-10 py-3"> --}}
-                                <div class="bg-white inline-block p-3 w-full">
-                                    <div>
-                                        <div class="flex justify-center items-center">
-                                            <img class="mr-10" src="{{ asset('img/icon.png') }}" alt="">
-                                            <p class="mr-10 text-2xl">匿名くコ:彡</p>
-                                            <p class="mr-10 text-2xl">{{ $user->company }} <br> {{ $user->department }}</p>
-                                            <p class="mr-10 text-2xl">未依頼</p>
-                                            <p class="mr-10 text-xl">03/28（月）<br> 19:00~19:10</p>
-                                            <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-2/3"><i
-                                                    class="fa-solid fa-comment-dots"
-                                                    onclick="location.href='{{ route('mentee.ticket') }}' ">チャット</i></button>
+                        @if (isset($mentors))
+
+                            <section class="px-5 w-full">
+                                @foreach ($mentors as $mentor)
+                                    <div class="bg-white inline-block p-3 w-full">
+                                        <div>
+                                            <div class="flex justify-center items-center">
+                                                <img class="mr-10" src="{{ asset('img/icon.png') }}" alt="">
+                                                <p class="mr-10 text-2xl">匿名くコ:彡</p>
+                                                <p class="mr-10 text-2xl">{{ $mentor->company }} <br>
+                                                    {{ $mentor->department }}</p>
+                                                <p class="mr-10 text-2xl">
+                                                    {{ $mentor->getSchedule(Auth::id())['schedule_status'] }}</p>
+                                                <p class="mr-10 text-xl">
+                                                    {{ $mentor->getSchedule(Auth::id())['fixed_schedule'] }}</p>
+                                                @if ($mentor->getSchedule(Auth::id())['thread_id'])
+                                                    <button
+                                                        class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-2/3"><i
+                                                            class="fa-solid fa-comment-dots"
+                                                            onclick="location.href='{{ route('mentee.chat', ['thread_id' => $mentor->getSchedule(Auth::id())['thread_id']]) }}' ">チャット</i></button>
+                                                @else
+                                                    <button
+                                                        class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-2/3"><i
+                                                            class="fa-solid fa-comment-dots"
+                                                            onclick="location.href='{{ route('mentee.ticket', ['mentor_user_id' => $mentor->id]) }}' ">チャット</i></button>
+                                                @endif
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
-                        </section>
+                                @endforeach
+                            </section>
 
                         @endif
                     </div>

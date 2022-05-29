@@ -38,7 +38,7 @@
                     <div>
                         <div class="flex justify-center items-center">
                             @if ($ticket <= 0)
-                                <form action="{{ route('ticket.purchase') }}" method="POST"
+                                <form action="{{ route('ticket.purchase', $mentor_user_id) }}" method="POST"
                                     class="bg-[#13B1C0] text-white w-9/12 mt-2 rounded text-center cursor-pointer">
                                     @csrf
                                     <button type="submit" class="font-bold h-10 text-2xl">
@@ -46,7 +46,7 @@
                                     </button>
                                 </form>
                             @else
-                                <form action="{{ route('ticket.consume') }}" method="POST"
+                                <form action="{{ route('ticket.consume', $mentor_user_id) }}" method="POST"
                                     onsubmit="return confirm('チケットを消費しますか？')"
                                     class="bg-[#13B1C0] text-white w-9/12 mt-2 rounded text-center cursor-pointer">
                                     @csrf
