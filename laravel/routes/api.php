@@ -14,8 +14,8 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-  return $request->user();
+    return $request->user();
 });
 
-Route::get('/chat', 'Api\ChatController@index');
+Route::get('/chat/{thread_id}', 'Api\ChatController@index');
 Route::post('/chat', 'Api\ChatController@store');

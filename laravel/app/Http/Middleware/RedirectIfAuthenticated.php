@@ -19,9 +19,13 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect(RouteServiceProvider::HOME);
+            $user  =  Auth::user();
+            if ($user->is_mentor == true) {
+                return redirect('mentor.request_list');
+            } else {
+                return redirect('search');
+            }
         }
-
         return $next($request);
     }
 }
