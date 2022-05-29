@@ -25,6 +25,11 @@ class ScheduleAdjustment extends Model
 
     public function schedule_statuses()
     {
-        return $this->hasMany(Schedule_status::class);
+        return $this->hasMany(ScheduleStatus::class);
+    }
+
+    public function threads()
+    {
+        return $this->belongsTo(Thread::class);
     }
 }

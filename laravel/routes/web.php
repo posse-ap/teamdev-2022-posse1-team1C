@@ -30,12 +30,13 @@ Route::get('/mentee/question', 'MenteeController@survey_question')->name('mentee
 Route::get('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
 Route::get('/mentee/cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
 Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
-Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.request_list');
+Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.get_mentor');
 
 Route::get('/mentor/register', 'MentorController@register')->name('mentor.register');
 Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
 Route::get('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register');
 Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
+Route::get('/mentor/request-list', 'MentorController@request_list')->name('mentor.get_mentee');
 
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
