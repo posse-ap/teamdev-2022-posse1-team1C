@@ -8,10 +8,10 @@
             <i class="fa-solid fa-magnifying-glass"></i>
         </button>
     </form> -->
-    <div class="my-auto ml-auto">
+    <div class="my-auto ml-auto flex">
         @if (Auth::check())
             @if (Auth::user()->is_mentor == 1)
-                <ul class="menu ml-5 mr-5">
+                <ul class="menu ml-5 mr-5 mt-2">
                     <li>
                         <a href="#"><img class="" src="{{ asset('img/icon.png') }}" alt="アイコン"></a>
                         <ul class="w-full">
@@ -27,7 +27,9 @@
                     </li>
                 </ul>
                 <button class="bg-[#13B1C0] text-white w-24 rounded-md shadow-md h-10 my-auto"
-                    onclick="location.href='{{ route('mentor.request_list') }}' ">依頼一覧</button>
+                    onclick="location.href='{{ route('search') }}' ">依頼一覧</button>
+                <button class="bg-[#13B1C0] text-white w-24 ml-2 rounded-md shadow-md h-10 my-auto"
+                    onclick="location.href='{{ route('mentor.request_list') }}' ">検索する</button>
             @else
                 <ul class="menu ml-5 mr-5 mt-7">
                     <li>
