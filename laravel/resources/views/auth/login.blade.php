@@ -72,7 +72,8 @@
                                     </button>
                                     <div>
                                         <a
-                                            class="text-teal-400 border border-teal-400 rounded px-5 py-1 mb-4 mx-5 flex justify-center items-center">
+                                            class="text-teal-400 border border-teal-400 rounded px-5 py-1 mb-4 mx-5 flex justify-center items-center"
+                                            href="{{ route('mentee.register') }}">
                                             {{ __('アカウントをお持ちでない方はこちら') }}
                                         </a>
                                     </div>

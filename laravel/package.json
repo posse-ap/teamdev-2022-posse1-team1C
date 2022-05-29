@@ -27,6 +27,10 @@
         "vue-loader": "^15.9.8"
     },
     "dependencies": {
+        "chart.js": "^3.7.1",
+        "chartjs-plugin-datalabels": "^2.0.0",
+        "react-chartjs-2": "^4.1.0",
+        "react-router-dom": "^6.3.0",
         "cors": "^2.8.5",
         "skyway-js": "^4.4.4"
     }
