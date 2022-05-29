@@ -15,27 +15,34 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/top', 'TopController@top')->name('top');
 
 
 Auth::routes();
 // Route::get('top/login', 'Auth\LoginController.php@index')->name('login');
 
 // Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/mentee/register', 'MenteeController@register')->name('mentee.register');
-Route::get('/mentee/register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
-Route::get('/mentee/profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
-Route::get('/mentee/question', 'MenteeController@survey_question')->name('mentee.survey.question');
-Route::get('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
-Route::post('/mentee/reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
-Route::get('/mentee/cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
-Route::get('/mentee/inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
-Route::get('/mentee/request-list', 'MenteeController@request_list')->name('mentee.request_list');
-Route::get('/mentor/profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
-Route::get('/mentor/register-confirm', 'MentorController@register_confirm')->name('mentor.register');
+Route::get('/top', 'TopController@top')->name('top');
 
 Route::get('/chat', 'ChatController@index')->name('chat')->middleware('auth');
+Route::prefix('mentee')->group(function () {
+    Route::get('register', 'MenteeController@register')->name('mentee.register');
+    Route::get('register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
+    Route::get('profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
+    Route::post('profile/edit', 'MenteeController@edit_profile')->name('mentee.profile_edit');
+    Route::get('question', 'MenteeController@survey_question')->name('mentee.survey.question');
+    Route::get('reason', 'MenteeController@survey_reason')->name('mentee.survey.reason');
+    Route::get('cancel-reason', 'MenteeController@survey_cancel_reason')->name('mentee.survey.cancel');
+    Route::get('inquiry', 'MenteeController@inquiry')->name('mentee.inquiry');
+    Route::get('request-list', 'MenteeController@request_list')->name('mentee.request_list');
+    Route::get('chat/{thread_id}', 'ChatController@mentee_chat')->name('mentee.chat')->middleware('auth');
+});
+
+Route::prefix('mentor')->group(function () {
+    Route::get('register', 'MentorController@register')->name('mentor.register');
+    Route::get('register-confirm', 'MentorController@register_confirm')->name('mentor.register');
+    Route::get('profile/edit', 'MentorController@edit_profile')->name('mentor.profile_edit');
+    Route::get('chat/{thread_id}', 'ChatController@mentor_chat')->name('mentor.chat')->middleware('auth');
+});
 
 //Call
 Route::get('/call', 'CallController@index')->name('call');
