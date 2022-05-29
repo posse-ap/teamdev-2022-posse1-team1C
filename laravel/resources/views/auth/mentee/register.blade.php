@@ -24,7 +24,7 @@
                                         <div>
                                             <input id="email" type="email"
                                                 class="bg-gray-100 w-full h-10 p-2 rounded outline-none" @error('email') is-invalid @enderror
-                                                name="email" value="{{ old('email') }}" required autocomplete="email"
+                                                name="email" value="{{ old('email') }}"  autocomplete="email"
                                                 placeholder="Anovey@com">
                                         </div>
                                         @error('email')
@@ -41,7 +41,7 @@
                                         <div class="flex bg-gray-100 rounded">
                                             <input id="password" type="password"
                                                 class="bg-gray-100 w-full h-10 p-2 rounded outline-none" @error('password') is-invalid @enderror
-                                                name="password" required autocomplete="new-password" placeholder="Password">
+                                                name="password"  autocomplete="new-password" placeholder="Password">
                                             <span id="buttonEye"
                                                 class="fa fa-eye my-auto mr-3 cursor-pointer"></span>
                                         </div>
@@ -59,7 +59,7 @@
                                         <div class="flex bg-gray-100 rounded">
                                             <input id="password-confirm" type="password"
                                                 class="bg-gray-100 w-full h-10 p-2 rounded outline-none" name="password_confirmation"  @error('password_confirmation') is-invalid @enderror
-                                            required autocomplete="new-password" placeholder="上と同じパスワードを入力してください">
+                                             autocomplete="new-password" placeholder="上と同じパスワードを入力してください">
                                             <span id="buttonEye2"
                                             class="fa fa-eye my-auto mr-3 cursor-pointer"></span>
                                         </div>
@@ -74,7 +74,7 @@
                                 <div>
                                     <div>
                                         <div class="flex justify-center items-center">
-                                            <input type="checkbox" name="" id="" class="mr-3 h-25 w-25" required>
+                                            <input type="checkbox" name="" id="agree" class="mr-3 h-25 w-25" >
                                             <label for="remember">
                                                 <p><a href="" class="text-teal-400">利用規約</a>と<a href=""
                                                         class="text-teal-400">プライバシーポリシー</a>に同意します。</p>
