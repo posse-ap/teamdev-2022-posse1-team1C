@@ -25,10 +25,6 @@ Route::get('/', 'TopController@top')->name('top');
 
 Route::get('/admin{any}', 'AdminController@index')->where('any', '.*')->name('admin.index');
 
-Route::get('/schedule-test', function () {
-    return view('schedule.index');
-});
-
 Route::prefix('mentee')->group(function () {
     Route::get('register', 'MenteeController@register_show')->name('mentee.register');
     Route::post('register-confirm', 'MenteeController@register_confirm')->name('mentee.register_confirm');
@@ -65,10 +61,6 @@ Route::post('/ticket/consume', 'TicketController@consume')->name('ticket.consume
 
 // inquiry
 Route::get('inquiry', 'MenteeController@inquiry')->name('inquiry');
-
-Route::get('/schedule', function () {
-    return view('schedule.index');
-});
 
 //mail
 Route::get('/mail/mentor-schedule-adjustment-remind-mail', 'Api\MailController@sendToMentorScheduleAdjustmentRemindMail');
