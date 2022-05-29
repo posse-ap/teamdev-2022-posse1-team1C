@@ -34,12 +34,12 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="">
                     <div class="flex">
                         <label for="password" class="text-md-right font-bold">{{ __('パスワード（英数字8文字以上）') }}</label>
                         <div class="border bg-red-500 text-white text-xs px-4 pt-1 rounded ml-2">必須</div>
                     </div>
-                    <div class="mb-6 mt-2 relative">
+                    <div class="mb-6 mt-2">
                         <div class="flex bg-gray-100 rounded">
                             <input
                                 id="password"
